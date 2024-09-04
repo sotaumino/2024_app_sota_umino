@@ -23,6 +23,7 @@ class ListCell: UITableViewCell {
         genreLabel.text = ""
         addressLabel.text = ""
         obsessionLabel.text = ""
+        
     }
     
     // 店舗画像
