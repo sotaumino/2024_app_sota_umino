@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchResultController" customModule="GourmetApp" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="Oxs-hq-rXw" id="1ao-ec-rBa"/>
                 <outlet property="tableView" destination="fh7-AP-6NN" id="TAH-EM-10h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="BKG-5b-Q62"/>
             </connections>
@@ -23,6 +24,14 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="店舗名を入力してください..." translatesAutoresizingMaskIntoConstraints="NO" id="Oxs-hq-rXw">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="QbS-3a-gLE"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
