@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import AlamofireImage
+// import AlamofireImage
 
 class ListCell: UITableViewCell {
 
@@ -24,12 +24,49 @@ class ListCell: UITableViewCell {
         addressLabel.text = ""
         obsessionLabel.text = ""
         
+        
     }
     
     // 店舗画像
-    func setShopImageView(imageUrlString: String) {
-        guard let shopOmageUrl = URL(string: imageUrlString) else {return}
-        shopImageView.af.setImage(withURL: shopOmageUrl, placeholderImage: UIImage(named: "NoImage"))
+    //func setShopImageView(imageUrlString: String) {
+    //    guard let shopOmageUrl = URL(string: imageUrlString) else {return}
+    //    shopImageView.af.setImage(withURL: shopOmageUrl, placeholderImage: UIImage(named: "NoImage"))
+    //}
+    
+    func setup(entity: GourmetSearchShopEntity) {
+        // テキストとフォントの設定
+        shopNameLabel.text = entity.name
+        shopNameLabel.font = UIFont.systemFont(ofSize: 15)
+
+        genreLabel.text = entity.genre?.name
+        genreLabel.font = UIFont.systemFont(ofSize: 10)
+
+        addressLabel.text = entity.address
+        addressLabel.font = UIFont.systemFont(ofSize: 10)
+
+        setupObsession(privateRoom: entity.privateRoom, card: entity.card, nonSmoking: entity.nonSmoking)
+
+        // すでに制約が適用されているか確認し、重複しないようにする
+        if shopNameLabel.constraints.isEmpty {
+            NSLayoutConstraint.activate([
+                shopNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+                shopNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+                shopNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+
+                genreLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+                genreLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+                genreLabel.topAnchor.constraint(equalTo: shopNameLabel.bottomAnchor, constant: 8),
+
+                addressLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+                addressLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+                addressLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 8),
+
+                obsessionLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+                obsessionLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+                obsessionLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 8),
+                obsessionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            ])
+        }
     }
     
     // こだわり
@@ -50,6 +87,9 @@ class ListCell: UITableViewCell {
         }
         
         obsessionLabel.text = obsession.joined(separator: ",")
+        obsessionLabel.font = UIFont.systemFont(ofSize: 10)
+        obsessionLabel.textColor = UIColor.white
+        obsessionLabel.backgroundColor = UIColor.red
     }
     
 }

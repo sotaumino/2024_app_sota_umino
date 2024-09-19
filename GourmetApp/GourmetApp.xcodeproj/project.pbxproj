@@ -22,6 +22,21 @@
 		C9D3CDE52C8041FF000D0615 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CDE42C8041FF000D0615 /* TabBarController.swift */; };
 		C9D3CDE82C804779000D0615 /* FavoriteCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CDE62C804779000D0615 /* FavoriteCollectionViewController.swift */; };
 		C9D3CDE92C804779000D0615 /* FavoriteCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D3CDE72C804779000D0615 /* FavoriteCollectionViewController.xib */; };
+		C9D6DB442C9C1F9B003D896A /* CouponController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6DB352C9C1F9A003D896A /* CouponController.xib */; };
+		C9D6DB452C9C1F9B003D896A /* URL+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB362C9C1F9A003D896A /* URL+Add.swift */; };
+		C9D6DB462C9C1F9B003D896A /* ShopDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6DB372C9C1F9A003D896A /* ShopDetailController.xib */; };
+		C9D6DB472C9C1F9B003D896A /* ShopImageCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6DB382C9C1F9A003D896A /* ShopImageCellTableViewCell.xib */; };
+		C9D6DB482C9C1F9B003D896A /* ShopDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB392C9C1F9A003D896A /* ShopDetailCell.swift */; };
+		C9D6DB492C9C1F9B003D896A /* ShopImageCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3A2C9C1F9A003D896A /* ShopImageCellTableViewCell.swift */; };
+		C9D6DB4A2C9C1F9B003D896A /* GenreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3B2C9C1F9A003D896A /* GenreEntity.swift */; };
+		C9D6DB4B2C9C1F9B003D896A /* GourmetSearchShopEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */; };
+		C9D6DB4C2C9C1F9B003D896A /* ShopDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */; };
+		C9D6DB4D2C9C1F9B003D896A /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */; };
+		C9D6DB4E2C9C1F9B003D896A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */; };
+		C9D6DB4F2C9C1F9B003D896A /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB402C9C1F9B003D896A /* Secret.swift */; };
+		C9D6DB502C9C1F9B003D896A /* GourmetSearchFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */; };
+		C9D6DB512C9C1F9B003D896A /* ShopDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */; };
+		C9D6DB522C9C1F9B003D896A /* CouponUrlEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB432C9C1F9B003D896A /* CouponUrlEntity.swift */; };
 		CD4A7F96A9B29903CAF44592 /* Pods_GourmetAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57141C0D31D27451675241C7 /* Pods_GourmetAppTests.framework */; };
 		E9AC9E39A188B86E54F0A2FF /* Pods_GourmetApp_GourmetAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4307549CDDA6346CB6606C /* Pods_GourmetApp_GourmetAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -87,6 +102,21 @@
 		C9D3CDE42C8041FF000D0615 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C9D3CDE62C804779000D0615 /* FavoriteCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCollectionViewController.swift; sourceTree = "<group>"; };
 		C9D3CDE72C804779000D0615 /* FavoriteCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteCollectionViewController.xib; sourceTree = "<group>"; };
+		C9D6DB352C9C1F9A003D896A /* CouponController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CouponController.xib; sourceTree = "<group>"; };
+		C9D6DB362C9C1F9A003D896A /* URL+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Add.swift"; sourceTree = "<group>"; };
+		C9D6DB372C9C1F9A003D896A /* ShopDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailController.xib; sourceTree = "<group>"; };
+		C9D6DB382C9C1F9A003D896A /* ShopImageCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopImageCellTableViewCell.xib; sourceTree = "<group>"; };
+		C9D6DB392C9C1F9A003D896A /* ShopDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailCell.swift; sourceTree = "<group>"; };
+		C9D6DB3A2C9C1F9A003D896A /* ShopImageCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopImageCellTableViewCell.swift; sourceTree = "<group>"; };
+		C9D6DB3B2C9C1F9A003D896A /* GenreEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreEntity.swift; sourceTree = "<group>"; };
+		C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetSearchShopEntity.swift; sourceTree = "<group>"; };
+		C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailCell.xib; sourceTree = "<group>"; };
+		C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
+		C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C9D6DB402C9C1F9B003D896A /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
+		C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetSearchFetcher.swift; sourceTree = "<group>"; };
+		C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailController.swift; sourceTree = "<group>"; };
+		C9D6DB432C9C1F9B003D896A /* CouponUrlEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponUrlEntity.swift; sourceTree = "<group>"; };
 		F00DB2685A31CB9E1FDF5C2D /* Pods-GourmetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetApp.release.xcconfig"; path = "Target Support Files/Pods-GourmetApp/Pods-GourmetApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +187,21 @@
 		C9D3CD952C800CAA000D0615 /* GourmetApp */ = {
 			isa = PBXGroup;
 			children = (
+				C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */,
+				C9D6DB352C9C1F9A003D896A /* CouponController.xib */,
+				C9D6DB432C9C1F9B003D896A /* CouponUrlEntity.swift */,
+				C9D6DB3B2C9C1F9A003D896A /* GenreEntity.swift */,
+				C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */,
+				C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */,
+				C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */,
+				C9D6DB402C9C1F9B003D896A /* Secret.swift */,
+				C9D6DB392C9C1F9A003D896A /* ShopDetailCell.swift */,
+				C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */,
+				C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */,
+				C9D6DB372C9C1F9A003D896A /* ShopDetailController.xib */,
+				C9D6DB3A2C9C1F9A003D896A /* ShopImageCellTableViewCell.swift */,
+				C9D6DB382C9C1F9A003D896A /* ShopImageCellTableViewCell.xib */,
+				C9D6DB362C9C1F9A003D896A /* URL+Add.swift */,
 				C9D3CD962C800CAA000D0615 /* AppDelegate.swift */,
 				C9D3CDE02C800FDE000D0615 /* SearchResultController.swift */,
 				C9D3CDE12C800FDE000D0615 /* SearchResultController.xib */,
@@ -315,9 +360,13 @@
 			files = (
 				C9D3CDA02C800CAC000D0615 /* Assets.xcassets in Resources */,
 				C9D3CDE92C804779000D0615 /* FavoriteCollectionViewController.xib in Resources */,
+				C9D6DB4C2C9C1F9B003D896A /* ShopDetailCell.xib in Resources */,
+				C9D6DB462C9C1F9B003D896A /* ShopDetailController.xib in Resources */,
 				C9D3CDA32C800CAC000D0615 /* Base in Resources */,
+				C9D6DB442C9C1F9B003D896A /* CouponController.xib in Resources */,
 				C9D3CDE32C800FDE000D0615 /* SearchResultController.xib in Resources */,
 				C9D3CDDF2C800EB2000D0615 /* ListCell.xib in Resources */,
+				C9D6DB472C9C1F9B003D896A /* ShopImageCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,9 +495,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D3CD9B2C800CAA000D0615 /* ViewController.swift in Sources */,
+				C9D6DB4F2C9C1F9B003D896A /* Secret.swift in Sources */,
+				C9D6DB502C9C1F9B003D896A /* GourmetSearchFetcher.swift in Sources */,
+				C9D6DB4D2C9C1F9B003D896A /* CouponController.swift in Sources */,
 				C9D3CD972C800CAA000D0615 /* AppDelegate.swift in Sources */,
+				C9D6DB4A2C9C1F9B003D896A /* GenreEntity.swift in Sources */,
+				C9D6DB512C9C1F9B003D896A /* ShopDetailController.swift in Sources */,
 				C9D3CDDE2C800EB2000D0615 /* ListCell.swift in Sources */,
 				C9D3CDE52C8041FF000D0615 /* TabBarController.swift in Sources */,
+				C9D6DB482C9C1F9B003D896A /* ShopDetailCell.swift in Sources */,
+				C9D6DB4B2C9C1F9B003D896A /* GourmetSearchShopEntity.swift in Sources */,
+				C9D6DB4E2C9C1F9B003D896A /* SceneDelegate.swift in Sources */,
+				C9D6DB492C9C1F9B003D896A /* ShopImageCellTableViewCell.swift in Sources */,
+				C9D6DB522C9C1F9B003D896A /* CouponUrlEntity.swift in Sources */,
+				C9D6DB452C9C1F9B003D896A /* URL+Add.swift in Sources */,
 				C9D3CDE82C804779000D0615 /* FavoriteCollectionViewController.swift in Sources */,
 				C9D3CDE22C800FDE000D0615 /* SearchResultController.swift in Sources */,
 			);

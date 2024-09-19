@@ -5,16 +5,17 @@ class SearchResultController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let items = ["北海道", "青森県", "岩手県", "宮城県", "秋田県", "山形県", "福島県", "茨城県", "栃木県", "群馬県", "埼玉県", "千葉県", "東京都", "神奈川県"]
-    var searchResult = [String]()
+    var shopEntities = [GourmetSearchShopEntity]()
     
     let sortOptions = ["店名かな順", "ジャンルコード順", "小エリアコード順", "おススメ順"]
     
-    var selectedSortOptionIndex: Int = 0
+    var selectedSortOptionIndex: Int = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationItem.backButtonTitle = "Back"
+        
         // ナビゲーションバーのタイトルを設定
         self.title = "検索結果一覧画面"
         
@@ -27,9 +28,9 @@ class SearchResultController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UINib(nibName: "searchResultCell", bundle: nil), forCellReuseIdentifier: "searchResultCell")
+        tableView.register(UINib(nibName: CellName.ListCell, bundle: nil), forCellReuseIdentifier: CellName.ListCell)
         
-        searchResult = items  // 初期値として全件を表示するために items を設定
+        fetchList(searchText: "")
     }
 
     // 初期化メソッドでxibをロード
@@ -39,6 +40,25 @@ class SearchResultController: UIViewController {
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    func fetchList(searchText: String){
+        shopEntities = []
+        tableView.reloadData()
+        
+        let selectedSortIndex = selectedSortOptionIndex
+        
+        GourmetSearchFetcher().fetchForShopName(searchText, selectedSortIndex: selectedSortIndex) { [weak self] entities in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                print("取得したデータ: \(entities)")
+                self.shopEntities = entities
+                self.tableView.reloadData()
+            }
+        } failure: { [weak self] in
+            guard self != nil else { return }
+        }
+            
     }
     
     @objc func onTapSortButton() {
@@ -65,7 +85,8 @@ class SearchResultController: UIViewController {
         // ここで選択されたオプションに基づいて searchResult をソートする
         switch selectedSortOptionIndex {
         case 0:
-            searchResult.sort()  // 例: 店名かな順
+            // shopEntities.sort()  // 例: 店名かな順
+            break
         case 1:
             // 他のソート条件を追加
             break
@@ -86,33 +107,37 @@ class SearchResultController: UIViewController {
 extension SearchResultController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // searchResult の数を返す
-        return searchResult.count
+        // shopEntities の数を返す
+        return shopEntities.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        // searchResult のデータを使用
-        cell.textLabel?.text = searchResult[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellName.ListCell, for: indexPath) as? ListCell, shopEntities.count > indexPath.row else{
+            return UITableViewCell()
+        }
+        
+        cell.setup(entity: shopEntities[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let shopDetailController = ShopDetailController()
+        
+        shopDetailController.shopEntity = shopEntities[indexPath.row]
+        // TabBarを非表示に設定
+        shopDetailController.hidesBottomBarWhenPushed = true
+        
+        self.navigationController?.pushViewController(shopDetailController, animated: true)
     }
 }
 
 extension SearchResultController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)
-        searchResult.removeAll()
 
-        if searchBar.text == "" {
-            searchResult = items  // テキストが空の場合、すべてのアイテムを表示
-        } else {
-            for data in items {
-                if data.contains(searchBar.text!) {
-                    searchResult.append(data)
-                }
-            }
-        }
-        tableView.reloadData()
+        guard let searchText = searchBar.text else { return }
+        
+        fetchList(searchText: searchText)
     }
 }
