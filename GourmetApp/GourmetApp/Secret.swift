@@ -9,13 +9,18 @@ import Foundation
 
 struct Secret {
     static let apiKey = "b8a0120546f61430"
-    static let gourmetSearchApi = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/" 
+    static let gourmetSearchApi = "https://webservice.recruit.co.jp/hotpepper/gourmet/v1/"
 }
 
 
 struct CellName {
     static let ListCell = "ListCell"
-    // static let shopImageCell = "ShopImageCell"
+    static let shopImageCell = "ShopImageCell"
     static let ShopDetailCell = "ShopDetailCell"
-    // static let favoriteViewCell = "FavoriteViewCell"
+    static let FavoriteViewCell = "FavoriteViewCell"
 }
+
+//  struct UDKey {
+//        static let favoriteShopIds =  "FavoriteShopIds"
+//        static let favoriteShopEntities = "FavoriteShopEntities"
+//  }

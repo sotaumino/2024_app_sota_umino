@@ -27,12 +27,23 @@ class GourmetSearchFetcher: NSObject {
         apiFetch(queryItems: queryItems, success: success, failer: failure)
     }
     
+    func fetchForShopIds(_ shopIds: [String], success: @escaping ([GourmetSearchShopEntity]) -> Void, failer: @escaping () -> Void){
+        let queryItems = makeFetchQueryItems(shopIds: shopIds)
+        
+        apiFetch(queryItems: queryItems, success: success, failer: failer)
+    }
+    
     private func makeShopNameSearchFetchQueryItems(searchText: String, selectedSortIndex: Int) -> [URLQueryItem] {
         let sortValue = "\(selectedSortIndex + 1)"  // インデックスを使って順番を決定
         return defaultQueryItems + [
             URLQueryItem(name: "name_any", value: searchText),
             URLQueryItem(name: "order", value: sortValue)
         ]
+    }
+    
+    private func makeFetchQueryItems(shopIds: [String]) -> [URLQueryItem] {
+        let shopIdParameterValue = shopIds.joined(separator: ",")
+        return defaultQueryItems + [URLQueryItem(name: "id", value: shopIdParameterValue)]
     }
     
     func apiFetch(queryItems: [URLQueryItem], success: @escaping(([GourmetSearchShopEntity]) -> Void), failer: @escaping () -> Void) {

@@ -7,6 +7,78 @@
 
 import UIKit
 
+enum ShopDetailCellType: Int, CaseIterable {
+    case shopImage
+    case genre
+    case access
+    case adress
+    case privateRoom
+    case freeDrink
+    case freeFood
+    case course
+    case horigotatu
+    case tatami
+    case card
+    
+    func title() -> String {
+        switch self {
+        case .shopImage: 
+            return "店舗画像"
+        case .genre:
+            return "ジャンル"
+        case .access:
+            return "交通アクセス"
+        case .adress:
+            return "住所"
+        case .privateRoom:
+            return "個室"
+        case .freeDrink:
+            return "飲み放題"
+        case .freeFood:
+            return "食べ放題"
+        case .course:
+            return "コース"
+        case .horigotatu:
+            return "掘りごたつ"
+        case .tatami:
+            return "座敷"
+        case .card:
+            return "カード"
+        }
+    }
+    
+    func detail(entity: GourmetSearchShopEntity?) -> String {
+        guard let entity else { return "" }
+        
+        let result: String?
+        switch self {
+        case .shopImage:
+            result = nil
+        case .genre:
+            result = entity.genre?.name
+        case .access:
+            result = entity.access
+        case .adress:
+            result = entity.address
+        case .privateRoom:
+            result = entity.privateRoom
+        case .freeDrink:
+            result = entity.freeDrink
+        case .freeFood:
+            result = entity.freeFood
+        case .course:
+            result = entity.course
+        case .horigotatu:
+            result = entity.horigotatsu
+        case .tatami:
+            result = entity.tatami
+        case .card:
+            result = entity.card
+        }
+        return result ?? ""
+    }
+}
+
 class ShopDetailController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
@@ -14,6 +86,8 @@ class ShopDetailController: UIViewController {
     
     
     var shopEntity: GourmetSearchShopEntity?
+    
+    var isFavorite = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +99,12 @@ class ShopDetailController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: CellName.ShopDetailCell, bundle: nil), forCellReuseIdentifier: CellName.ShopDetailCell)
+        tableView.register(UINib(nibName: CellName.shopImageCell, bundle: nil), forCellReuseIdentifier: CellName.shopImageCell)
+    }
+    
+    func setup(shopEntity entity: GourmetSearchShopEntity){
+        shopEntity = entity
+        updateIsFavorite()
     }
 
     @IBAction func couponButton(_ sender: Any) {
@@ -41,6 +121,25 @@ class ShopDetailController: UIViewController {
         return shopEntity?.couponUrls?.sp?.isEmpty ?? true
     }
     
+    // お気に入り更新
+    func updateIsFavorite() {
+        guard let shopId = shopEntity?.shopId else { return }
+        isFavorite = UserDefaultsManager.isFavorite(shopId)
+    }
+    
+    // 店舗画像Cell作成
+    func makeShopImageCell(_ indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellName.shopImageCell, for: indexPath) as? ShopImageCell
+        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.pcLarge)!, isFavorite: isFavorite, delegate: self)
+        
+        return cell ?? UITableViewCell()
+    }
+    // 店舗詳細Cell作成
+    func makeShopDetailCell(_ indexPath: IndexPath, cellType: ShopDetailCellType) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellName.ShopDetailCell, for: indexPath) as? ShopDetailCell
+        cell?.setup(title: cellType.title(), detail: cellType.detail(entity: shopEntity))
+        return cell ?? UITableViewCell()
+    }
 }
 
 
@@ -50,51 +149,30 @@ extension ShopDetailController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: CellName.ShopDetailCell, for: indexPath) as? ShopDetailCell else {
-                    return UITableViewCell()
-                }
-        // shopEntityがある場合、カスタムセルにデータをセット
-        if let shopEntity = shopEntity {
-            switch indexPath.row {
-            // ジャンル
-            case 0:
-                let genreName = shopEntity.genre?.name ?? "ジャンルなし"
-                cell.setup(title: "ジャンル", detail: genreName)
-            // 交通アクセス
-            case 1:
-                cell.setup(title: "交通アクセス", detail: shopEntity.access ?? "")
-            // 住所
-            case 2:
-                cell.setup(title: "住所", detail: shopEntity.address ?? "")
-            // コース
-            case 3:
-                cell.setup(title: "個室", detail: shopEntity.privateRoom ?? "")
-            // 飲み放題
-            case 4:
-                cell.setup(title: "飲み放題", detail: shopEntity.freeDrink ?? "")
-            // 食べ放題
-            case 5:
-                cell.setup(title: "食べ放題", detail: shopEntity.freeFood ?? "")
-            // 個室
-            case 6:
-                cell.setup(title: "個室", detail: shopEntity.privateRoom ?? "")
-            // 掘りごたつ
-            case 7:
-                cell.setup(title: "掘りごたつ", detail: shopEntity.horigotatsu ?? "")
-            // 座敷
-            case 8:
-                cell.setup(title: "座敷", detail: shopEntity.tatami
-                           ?? "")
-            // カード可
-            case 9:
-                cell.setup(title: "カード", detail: shopEntity.card ?? "")
-                
-            default:
-                break
-            }
-        }
-
-        return cell
+        guard let type = ShopDetailCellType(rawValue: indexPath.row) else { return UITableViewCell() }
+        
+        return type == .shopImage ? makeShopImageCell(indexPath) : makeShopDetailCell(indexPath, cellType: type)
     }
+}
+
+extension ShopDetailController: shopImageCellDelegate {
+    func onTapFavoriteButton(isAdd: Bool) {
+        
+        guard let shopId = shopEntity?.shopId else { return }
     
+        // お気に入りボタンが押されたときの処理をここに書く
+        if isAdd {
+            if !UserDefaultsManager.addShopId(shopId) {
+                return
+            }
+            
+            print("お気に入りに追加")
+        } else {
+            UserDefaultsManager.deleatShopId(shopId)
+            
+            print("お気に入りから削除")
+        }
+        updateIsFavorite()
+        tableView.reloadData()
+    }
 }

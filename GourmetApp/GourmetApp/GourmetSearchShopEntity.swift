@@ -8,6 +8,8 @@
 import Foundation
 
 final internal class GourmetSearchShopEntity: NSObject {
+    // 店舗Id
+    private(set) var shopId: String?
     // 店名
     private(set) var name: String?
     // 住所
@@ -34,11 +36,14 @@ final internal class GourmetSearchShopEntity: NSObject {
     private(set) var tatami: String?
     // クーポン
     private(set) var couponUrls: CouponUrlEntity?
+    // 写真
+    private(set) var photo: PhotoEntity?
     
     // イニシャライザに辞書データを受け取る
     init?(dic: [String: Any]) {
         // 辞書から店名と住所を抽出し、存在しない場合はnilを返す
-        guard let name = dic["name"] as? String,
+        guard let shopId = dic["id"] as? String,
+              let name = dic["name"] as? String,
               let address = dic["address"] as? String,
               let genre = GenreEntity(dic: dic["genre"] as? [String: String]),
               let privateRoom = dic["private_room"] as? String,
@@ -50,10 +55,12 @@ final internal class GourmetSearchShopEntity: NSObject {
               let freeFood = dic["free_food"] as? String,
               let horigotatsu = dic["horigotatsu"] as? String,
               let tatami = dic["tatami"] as? String,
-              let couponUrls = CouponUrlEntity(dic: dic["coupon_urls"] as? [String: String])
+              let couponUrls = CouponUrlEntity(dic: dic["coupon_urls"] as? [String: String]),
+              let photo = PhotoEntity( dic: dic["photo"] as? [String: Any])
         else {
             return nil
         }
+        self.shopId = shopId
         self.name = name
         self.address = address
         self.genre = genre
@@ -67,5 +74,6 @@ final internal class GourmetSearchShopEntity: NSObject {
         self.horigotatsu = horigotatsu
         self.tatami = tatami
         self.couponUrls = couponUrls
+        self.photo = photo
     }
 }

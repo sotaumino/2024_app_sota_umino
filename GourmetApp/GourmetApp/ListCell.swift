@@ -6,7 +6,8 @@
 //
 
 import UIKit
-// import AlamofireImage
+import AlamofireImage
+import Alamofire
 
 class ListCell: UITableViewCell {
 
@@ -24,49 +25,32 @@ class ListCell: UITableViewCell {
         addressLabel.text = ""
         obsessionLabel.text = ""
         
-        
     }
     
     // 店舗画像
-    //func setShopImageView(imageUrlString: String) {
-    //    guard let shopOmageUrl = URL(string: imageUrlString) else {return}
-    //    shopImageView.af.setImage(withURL: shopOmageUrl, placeholderImage: UIImage(named: "NoImage"))
-    //}
+    func setupShopImageView(imageUrlString: String) {
+        guard let shopImageUrl = URL(string: imageUrlString) else {return}
+        shopImageView.af.setImage(withURL: shopImageUrl, placeholderImage: UIImage(named: "NoImage"))
+    }
     
     func setup(entity: GourmetSearchShopEntity) {
-        // テキストとフォントの設定
+        if let imageUrlString = entity.photo?.pcMedium {
+            setupShopImageView(imageUrlString: imageUrlString)
+        } else {
+            // 画像URLがnilの場合の処理
+            print("画像URLが存在しません")
+        }
+        
         shopNameLabel.text = entity.name
-        shopNameLabel.font = UIFont.systemFont(ofSize: 15)
 
         genreLabel.text = entity.genre?.name
-        genreLabel.font = UIFont.systemFont(ofSize: 10)
 
         addressLabel.text = entity.address
-        addressLabel.font = UIFont.systemFont(ofSize: 10)
 
         setupObsession(privateRoom: entity.privateRoom, card: entity.card, nonSmoking: entity.nonSmoking)
+        
+        setupConstraints()
 
-        // すでに制約が適用されているか確認し、重複しないようにする
-        if shopNameLabel.constraints.isEmpty {
-            NSLayoutConstraint.activate([
-                shopNameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-                shopNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-                shopNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-
-                genreLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-                genreLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-                genreLabel.topAnchor.constraint(equalTo: shopNameLabel.bottomAnchor, constant: 8),
-
-                addressLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-                addressLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-                addressLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 8),
-
-                obsessionLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-                obsessionLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-                obsessionLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 8),
-                obsessionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
-            ])
-        }
     }
     
     // こだわり
@@ -75,21 +59,48 @@ class ListCell: UITableViewCell {
         var obsession = [String]()
         
         if let privateRoom, !privateRoom.isEmpty, privateRoom != "なし" {
-            obsession.append("個室")
+            obsession.append("個室あり")
         }
         
         if let card, !card.isEmpty {
             obsession.append("card\(card)")
         }
         
-        if let nonSmoking, nonSmoking.isEmpty {
+        if let nonSmoking, !nonSmoking.isEmpty {
             obsession.append(nonSmoking)
         }
         
         obsessionLabel.text = obsession.joined(separator: ",")
-        obsessionLabel.font = UIFont.systemFont(ofSize: 10)
-        obsessionLabel.textColor = UIColor.white
-        obsessionLabel.backgroundColor = UIColor.red
     }
     
+    func setupConstraints() {
+        NSLayoutConstraint.activate([
+            // Shop Image View Constraints
+            shopImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            shopImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            shopImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            shopImageView.widthAnchor.constraint(equalTo: shopImageView.heightAnchor),
+
+            // Shop Name Label Constraints
+            shopNameLabel.leadingAnchor.constraint(equalTo: shopImageView.trailingAnchor, constant: 16),
+            shopNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
+            shopNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+
+            // Genre Label Constraints
+            genreLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+            genreLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+            genreLabel.topAnchor.constraint(equalTo: shopNameLabel.bottomAnchor, constant: 4),
+
+            // Address Label Constraints
+            addressLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+            addressLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+            addressLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 4),
+
+            // Obsession Label Constraints
+            obsessionLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
+            obsessionLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
+            obsessionLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 4),
+            obsessionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+        ])
+    }
 }
