@@ -49,7 +49,7 @@ class FavoriteCollectionViewController: UIViewController {
                 self.updateData(entities: entities)
             }
         } failer: { [ weak self ] in
-            guard let self else { return }
+            guard self != nil else { return }
         }
 
     }

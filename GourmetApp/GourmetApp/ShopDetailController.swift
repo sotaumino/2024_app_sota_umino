@@ -130,7 +130,7 @@ class ShopDetailController: UIViewController {
     // 店舗画像Cell作成
     func makeShopImageCell(_ indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellName.shopImageCell, for: indexPath) as? ShopImageCell
-        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.pcLarge)!, isFavorite: isFavorite, delegate: self)
+        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.mobileLarge)!, isFavorite: isFavorite, delegate: self)
         
         return cell ?? UITableViewCell()
     }
@@ -152,6 +152,20 @@ extension ShopDetailController: UITableViewDelegate, UITableViewDataSource{
         guard let type = ShopDetailCellType(rawValue: indexPath.row) else { return UITableViewCell() }
         
         return type == .shopImage ? makeShopImageCell(indexPath) : makeShopDetailCell(indexPath, cellType: type)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let cellType = ShopDetailCellType(rawValue: indexPath.row) else {
+            return UITableView.automaticDimension
+        }
+
+        // 画像セルの場合は特定の高さを設定し、それ以外は自動的に決定
+        switch cellType {
+        case .shopImage:
+            return 100
+        default:
+            return UITableView.automaticDimension
+        }
     }
 }
 

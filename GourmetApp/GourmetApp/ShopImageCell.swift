@@ -31,16 +31,19 @@ class ShopImageCell: UITableViewCell {
         guard let shopImageUrl = URL(string: imageUrlString) else { return }
         shopImageView.af.setImage(withURL: shopImageUrl, placeholderImage: UIImage(named: "NoImage"))
         favoriteButton.isSelected = isFavorite
+        updateFavoriteButtonAppearance()
         self.delegate = delegate
+    }
+    
+    func updateFavoriteButtonAppearance(){
+        if favoriteButton.isSelected {
+            favoriteButton.setImage(UIImage(systemName: "star.fill"), for: .normal)
+        } else {
+            favoriteButton.setImage(UIImage(systemName: "star"), for: .normal)
+        }
     }
     
     @IBAction func onTapFavoriteButton(_ sender: Any) {
         delegate?.onTapFavoriteButton(isAdd: !(sender as AnyObject).isSelected)
-        
-        if let button = sender as? UIButton {
-            let image = UIImage(systemName: "star.fill")
-            button.setImage(image, for: .normal)
         }
-    }
-    
 }

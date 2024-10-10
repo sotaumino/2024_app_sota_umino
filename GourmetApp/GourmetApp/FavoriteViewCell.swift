@@ -2,7 +2,7 @@
 //  FavoriteViewCell.swift
 //  GourmetApp
 //
-//  Created by 海野 颯汰   on 2024/10/02.
+//  Created by 海野 颯汰   on 2024/10/10.
 //
 
 import UIKit
