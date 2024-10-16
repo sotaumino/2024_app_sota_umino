@@ -30,7 +30,6 @@ class SearchResultController: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: CellName.ListCell, bundle: nil), forCellReuseIdentifier: CellName.ListCell)
         
-        fetchList(searchText: "")
     }
 
     // 初期化メソッドでxibをロード
@@ -43,6 +42,8 @@ class SearchResultController: UIViewController {
     }
     
     func fetchList(searchText: String){
+        guard !searchText.isEmpty else { return }
+        
         shopEntities = []
         tableView.reloadData()
         

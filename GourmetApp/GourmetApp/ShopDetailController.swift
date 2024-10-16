@@ -130,7 +130,7 @@ class ShopDetailController: UIViewController {
     // 店舗画像Cell作成
     func makeShopImageCell(_ indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellName.shopImageCell, for: indexPath) as? ShopImageCell
-        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.mobileLarge)!, isFavorite: isFavorite, delegate: self)
+        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.pcLarge)!, isFavorite: isFavorite, delegate: self)
         
         return cell ?? UITableViewCell()
     }

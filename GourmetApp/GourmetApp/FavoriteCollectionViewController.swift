@@ -17,7 +17,7 @@ class FavoriteCollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "お気に入り画面0件"
+        self.title = "お気に入り画面"
         setupFavoriteCollectionView()
     }
     
