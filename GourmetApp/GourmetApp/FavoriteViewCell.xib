@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,20 +16,39 @@
                 <rect key="frame" x="0.0" y="0.0" width="130" height="154"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-Gn-SKQ">
-                        <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-U0-gmf">
-                        <rect key="frame" x="0.0" y="133" width="130" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-BP-DEh">
+                        <rect key="frame" x="-20" y="-20" width="170" height="170"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-Gn-SKQ">
+                                <rect key="frame" x="20" y="20" width="130" height="130"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="leading" secondItem="Bvc-BP-DEh" secondAttribute="leading" constant="20" id="5U3-aK-CuZ"/>
+                            <constraint firstAttribute="bottom" secondItem="IOE-Gn-SKQ" secondAttribute="bottom" constant="10" id="XdJ-N3-qcK"/>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="centerX" secondItem="Bvc-BP-DEh" secondAttribute="centerX" id="hId-Md-6o9"/>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="centerY" secondItem="Bvc-BP-DEh" secondAttribute="centerY" id="ir9-fi-lk0"/>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="top" secondItem="Bvc-BP-DEh" secondAttribute="top" constant="20" symbolic="YES" id="xfr-eD-euy"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-U0-gmf">
+                        <rect key="frame" x="0.0" y="133.66666666666666" width="130" height="20.333333333333343"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="kgx-U0-gmf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Vx8-8u-YEh"/>
+                <constraint firstItem="Bvc-BP-DEh" firstAttribute="centerX" secondItem="kgx-U0-gmf" secondAttribute="centerX" id="eRc-Uc-cKe"/>
+                <constraint firstAttribute="bottom" secondItem="Bvc-BP-DEh" secondAttribute="bottom" constant="4" id="lUG-eX-NZk"/>
+                <constraint firstItem="kgx-U0-gmf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="m3q-eu-YPa"/>
+                <constraint firstItem="Bvc-BP-DEh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-20" id="mCd-gY-cUD"/>
+                <constraint firstItem="Bvc-BP-DEh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-20" id="ogP-GB-YXu"/>
+                <constraint firstAttribute="bottom" secondItem="kgx-U0-gmf" secondAttribute="bottom" id="xIY-Fb-0lJ"/>
+            </constraints>
             <size key="customSize" width="130" height="154"/>
             <connections>
                 <outlet property="shopImageView" destination="IOE-Gn-SKQ" id="soX-aj-l0D"/>
@@ -38,4 +57,9 @@
             <point key="canvasLocation" x="106.87022900763358" y="25.35211267605634"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

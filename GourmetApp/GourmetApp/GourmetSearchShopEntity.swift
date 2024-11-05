@@ -14,6 +14,8 @@ final internal class GourmetSearchShopEntity: NSObject {
     private(set) var name: String?
     // 住所
     private(set) var address: String?
+    /// 掲載店名かな
+    private(set) var nameKana: String?
     // お店ジャンル
     private(set) var genre: GenreEntity?
     // 個室
@@ -45,6 +47,7 @@ final internal class GourmetSearchShopEntity: NSObject {
         guard let shopId = dic["id"] as? String,
               let name = dic["name"] as? String,
               let address = dic["address"] as? String,
+              let nameKana = dic["name_kana"] as? String,
               let genre = GenreEntity(dic: dic["genre"] as? [String: String]),
               let privateRoom = dic["private_room"] as? String,
               let card = dic["card"] as? String,
@@ -63,6 +66,7 @@ final internal class GourmetSearchShopEntity: NSObject {
         self.shopId = shopId
         self.name = name
         self.address = address
+        self.nameKana = nameKana
         self.genre = genre
         self.privateRoom = privateRoom
         self.card = card
