@@ -19,9 +19,10 @@ class FavoriteViewCell: UICollectionViewCell {
     }
     
     func setup(entity: GourmetSearchShopEntity){
-        setupShopImageView(imageUrlString: entity.photo?.pcMedium ?? "")
+        setupShopImageView(imageUrlString: entity.photo?.mobileSmall ?? "")
         shopNameLabel.text = entity.name
     }
+    
     
     func setupShopImageView(imageUrlString: String){
         guard let shopImageUrl = URL(string: imageUrlString) else { return }

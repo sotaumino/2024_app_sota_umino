@@ -10,51 +10,65 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FavoriteViewCell" customModule="GourmetApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="130" height="154"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="339"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="130" height="154"/>
+                <rect key="frame" x="0.0" y="0.0" width="300" height="339"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-BP-DEh">
-                        <rect key="frame" x="-20" y="-20" width="170" height="170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="339"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IOE-Gn-SKQ">
-                                <rect key="frame" x="20" y="20" width="130" height="130"/>
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IOE-Gn-SKQ" secondAttribute="height" multiplier="1:1" id="ygw-ud-qzC"/>
+                                </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAf-xl-31E">
+                                <rect key="frame" x="0.0" y="300" width="300" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-U0-gmf">
+                                        <rect key="frame" x="20" y="-1.3333333333333144" width="280" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kgx-U0-gmf" firstAttribute="top" secondItem="BAf-xl-31E" secondAttribute="top" id="C3e-Wr-OM2"/>
+                                    <constraint firstAttribute="bottom" secondItem="kgx-U0-gmf" secondAttribute="bottom" constant="20" id="OWw-nv-Jab"/>
+                                    <constraint firstItem="kgx-U0-gmf" firstAttribute="leading" secondItem="BAf-xl-31E" secondAttribute="leading" constant="20" id="VGg-eD-SXt"/>
+                                    <constraint firstAttribute="trailing" secondItem="kgx-U0-gmf" secondAttribute="trailing" id="txS-Xo-Zjm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="leading" secondItem="Bvc-BP-DEh" secondAttribute="leading" constant="20" id="5U3-aK-CuZ"/>
-                            <constraint firstAttribute="bottom" secondItem="IOE-Gn-SKQ" secondAttribute="bottom" constant="10" id="XdJ-N3-qcK"/>
-                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="centerX" secondItem="Bvc-BP-DEh" secondAttribute="centerX" id="hId-Md-6o9"/>
-                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="centerY" secondItem="Bvc-BP-DEh" secondAttribute="centerY" id="ir9-fi-lk0"/>
-                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="top" secondItem="Bvc-BP-DEh" secondAttribute="top" constant="20" symbolic="YES" id="xfr-eD-euy"/>
+                            <constraint firstItem="BAf-xl-31E" firstAttribute="top" secondItem="IOE-Gn-SKQ" secondAttribute="bottom" id="0c8-4W-1cg"/>
+                            <constraint firstAttribute="bottom" secondItem="BAf-xl-31E" secondAttribute="bottom" id="1We-iK-I3g"/>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="leading" secondItem="Bvc-BP-DEh" secondAttribute="leading" id="AFs-hj-qGG"/>
+                            <constraint firstAttribute="trailing" secondItem="BAf-xl-31E" secondAttribute="trailing" id="I6N-cY-L2M"/>
+                            <constraint firstItem="BAf-xl-31E" firstAttribute="leading" secondItem="Bvc-BP-DEh" secondAttribute="leading" id="Orn-r0-Sg6"/>
+                            <constraint firstAttribute="trailing" secondItem="IOE-Gn-SKQ" secondAttribute="trailing" id="Tca-5n-ArF"/>
+                            <constraint firstItem="IOE-Gn-SKQ" firstAttribute="top" secondItem="Bvc-BP-DEh" secondAttribute="top" id="m9K-jC-qy8"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-U0-gmf">
-                        <rect key="frame" x="0.0" y="133.66666666666666" width="130" height="20.333333333333343"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="kgx-U0-gmf" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Vx8-8u-YEh"/>
-                <constraint firstItem="Bvc-BP-DEh" firstAttribute="centerX" secondItem="kgx-U0-gmf" secondAttribute="centerX" id="eRc-Uc-cKe"/>
-                <constraint firstAttribute="bottom" secondItem="Bvc-BP-DEh" secondAttribute="bottom" constant="4" id="lUG-eX-NZk"/>
-                <constraint firstItem="kgx-U0-gmf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="m3q-eu-YPa"/>
-                <constraint firstItem="Bvc-BP-DEh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-20" id="mCd-gY-cUD"/>
-                <constraint firstItem="Bvc-BP-DEh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-20" id="ogP-GB-YXu"/>
-                <constraint firstAttribute="bottom" secondItem="kgx-U0-gmf" secondAttribute="bottom" id="xIY-Fb-0lJ"/>
+                <constraint firstAttribute="bottom" secondItem="Bvc-BP-DEh" secondAttribute="bottom" id="HEq-ZL-4O2"/>
+                <constraint firstItem="Bvc-BP-DEh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ipq-Gl-HG9"/>
+                <constraint firstAttribute="trailing" secondItem="Bvc-BP-DEh" secondAttribute="trailing" id="WUh-mL-Ohg"/>
+                <constraint firstItem="Bvc-BP-DEh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ytu-lj-iMp"/>
             </constraints>
-            <size key="customSize" width="130" height="154"/>
+            <size key="customSize" width="300" height="339"/>
             <connections>
                 <outlet property="shopImageView" destination="IOE-Gn-SKQ" id="soX-aj-l0D"/>
                 <outlet property="shopNameLabel" destination="kgx-U0-gmf" id="PhN-yW-CX6"/>
             </connections>
-            <point key="canvasLocation" x="106.87022900763358" y="25.35211267605634"/>
+            <point key="canvasLocation" x="235.11450381679387" y="103.87323943661973"/>
         </collectionViewCell>
     </objects>
     <resources>

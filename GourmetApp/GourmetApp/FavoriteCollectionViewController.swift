@@ -84,6 +84,7 @@ extension FavoriteCollectionViewController: UICollectionViewDataSource {
         }
         
         cell.setup(entity: shopEntities[indexPath.row])
+        
         return cell
     }
 }
