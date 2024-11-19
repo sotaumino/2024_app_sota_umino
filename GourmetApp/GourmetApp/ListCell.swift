@@ -10,7 +10,7 @@ import AlamofireImage
 import Alamofire
 
 class ListCell: UITableViewCell {
-
+    
     @IBOutlet weak var shopImageView: UIImageView!
     @IBOutlet weak var shopNameLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
@@ -34,7 +34,7 @@ class ListCell: UITableViewCell {
     }
     
     func setup(entity: GourmetSearchShopEntity) {
-        if let imageUrlString = entity.photo?.pcMedium {
+        if let imageUrlString = entity.photo?.mobileSmall {
             setupShopImageView(imageUrlString: imageUrlString)
         } else {
             // 画像URLがnilの場合の処理
@@ -42,15 +42,12 @@ class ListCell: UITableViewCell {
         }
         
         shopNameLabel.text = entity.name
-
-        genreLabel.text = entity.genre?.name
-
-        addressLabel.text = entity.address
-
-        setupObsession(privateRoom: entity.privateRoom, card: entity.card, nonSmoking: entity.nonSmoking)
         
-        setupConstraints()
-
+        genreLabel.text = entity.genre?.name
+        
+        addressLabel.text = entity.address
+        
+        setupObsession(privateRoom: entity.privateRoom, card: entity.card, nonSmoking: entity.nonSmoking)
     }
     
     // こだわり
@@ -71,36 +68,5 @@ class ListCell: UITableViewCell {
         }
         
         obsessionLabel.text = obsession.joined(separator: ",")
-    }
-    
-    func setupConstraints() {
-        NSLayoutConstraint.activate([
-            // Shop Image View Constraints
-            shopImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            shopImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            shopImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            shopImageView.widthAnchor.constraint(equalTo: shopImageView.heightAnchor),
-
-            // Shop Name Label Constraints
-            shopNameLabel.leadingAnchor.constraint(equalTo: shopImageView.trailingAnchor, constant: 16),
-            shopNameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            shopNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-
-            // Genre Label Constraints
-            genreLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-            genreLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-            genreLabel.topAnchor.constraint(equalTo: shopNameLabel.bottomAnchor, constant: 4),
-
-            // Address Label Constraints
-            addressLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-            addressLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-            addressLabel.topAnchor.constraint(equalTo: genreLabel.bottomAnchor, constant: 4),
-
-            // Obsession Label Constraints
-            obsessionLabel.leadingAnchor.constraint(equalTo: shopNameLabel.leadingAnchor),
-            obsessionLabel.trailingAnchor.constraint(equalTo: shopNameLabel.trailingAnchor),
-            obsessionLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 4),
-            obsessionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
-        ])
     }
 }
