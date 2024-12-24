@@ -29,7 +29,7 @@
                                 <rect key="frame" x="0.0" y="300" width="300" height="39"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgx-U0-gmf">
-                                        <rect key="frame" x="20" y="-1.3333333333333144" width="280" height="20.333333333333332"/>
+                                        <rect key="frame" x="20" y="0.0" width="280" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -38,6 +38,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="kgx-U0-gmf" firstAttribute="top" secondItem="BAf-xl-31E" secondAttribute="top" id="C3e-Wr-OM2"/>
+                                    <constraint firstAttribute="height" constant="60" id="El5-LL-rce"/>
                                     <constraint firstAttribute="bottom" secondItem="kgx-U0-gmf" secondAttribute="bottom" constant="20" id="OWw-nv-Jab"/>
                                     <constraint firstItem="kgx-U0-gmf" firstAttribute="leading" secondItem="BAf-xl-31E" secondAttribute="leading" constant="20" id="VGg-eD-SXt"/>
                                     <constraint firstAttribute="trailing" secondItem="kgx-U0-gmf" secondAttribute="trailing" id="txS-Xo-Zjm"/>

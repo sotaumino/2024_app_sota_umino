@@ -10,6 +10,7 @@
 		0AFC15294C7DA788837220EA /* Pods_GourmetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1FBFF4A68E383D35C4DFA8 /* Pods_GourmetApp.framework */; };
 		C92152B22CB79A8600BE8551 /* FavoriteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */; };
 		C92152B32CB79A8600BE8551 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */; };
+		C9549A432CEC580B00899608 /* AlertUtlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9549A422CEC580B00899608 /* AlertUtlity.swift */; };
 		C9A741F22CAA910800E90ECD /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A741F12CAA910800E90ECD /* UserDefaultsManager.swift */; };
 		C9B076CB2CA174B800A253D2 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B076CA2CA174B800A253D2 /* PhotoEntity.swift */; };
 		C9B076CE2CA2AD4E00A253D2 /* ShopImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */; };
@@ -85,6 +86,7 @@
 		AE3AC3004D4B0E752FADEE18 /* Pods-GourmetAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetAppTests.release.xcconfig"; path = "Target Support Files/Pods-GourmetAppTests/Pods-GourmetAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
 		C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewCell.xib; sourceTree = "<group>"; };
+		C9549A422CEC580B00899608 /* AlertUtlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtlity.swift; sourceTree = "<group>"; };
 		C98872E02C8827A9008BC35B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98872E32C8827CB008BC35B /* Alamofire.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = Alamofire.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C98872E82C8829C5008BC35B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,8 +215,9 @@
 				C9D3CD962C800CAA000D0615 /* AppDelegate.swift */,
 				C9D3CDE02C800FDE000D0615 /* SearchResultController.swift */,
 				C9D3CDE12C800FDE000D0615 /* SearchResultController.xib */,
-				C9D3CDDD2C800EB2000D0615 /* ListCell.xib */,
+				C9549A422CEC580B00899608 /* AlertUtlity.swift */,
 				C9D3CDDC2C800EB2000D0615 /* ListCell.swift */,
+				C9D3CDDD2C800EB2000D0615 /* ListCell.xib */,
 				C9B076CC2CA2AD4E00A253D2 /* ShopImageCell.swift */,
 				C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */,
 				C9D3CD9A2C800CAA000D0615 /* ViewController.swift */,
@@ -514,6 +517,7 @@
 				C9D3CD972C800CAA000D0615 /* AppDelegate.swift in Sources */,
 				C9A741F22CAA910800E90ECD /* UserDefaultsManager.swift in Sources */,
 				C9D6DB4A2C9C1F9B003D896A /* GenreEntity.swift in Sources */,
+				C9549A432CEC580B00899608 /* AlertUtlity.swift in Sources */,
 				C9D6DB512C9C1F9B003D896A /* ShopDetailController.swift in Sources */,
 				C9D3CDDE2C800EB2000D0615 /* ListCell.swift in Sources */,
 				C9D3CDE52C8041FF000D0615 /* TabBarController.swift in Sources */,

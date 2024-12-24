@@ -57,7 +57,16 @@ class SearchResultController: UIViewController {
                 self.tableView.reloadData()
             }
         } failure: { [weak self] in
-            guard self != nil else { return }
+            guard let self else { return }
+            let alert = AlertUtlity.makeFetchErrorAlert
+            {
+                self.fetchList(searchText: searchText)
+            }
+            
+            DispatchQueue.main.async
+            {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
             
     }
@@ -70,7 +79,9 @@ class SearchResultController: UIViewController {
             let action = UIAlertAction(title: option, style: style) { [weak self] action in
                 guard let self = self else { return }
                 self.selectedSortOptionIndex = index  // 選択されたオプションを更新
-                self.applySort()  // ソート処理を呼び出し
+                
+                guard let searchText = self.searchBar.text, !searchText.isEmpty else { return }
+                self.fetchList(searchText: searchText)
             }
             alert.addAction(action)
         }
@@ -80,28 +91,6 @@ class SearchResultController: UIViewController {
         alert.addAction(cancelButton)
         
         present(alert, animated: true, completion: nil)
-    }
-    
-    func applySort() {
-        // ここで選択されたオプションに基づいて searchResult をソートする
-        switch selectedSortOptionIndex {
-        case 0:
-            // shopEntities.sort()  // 例: 店名かな順
-            break
-        case 1:
-            // 他のソート条件を追加
-            break
-        case 2:
-            // 他のソート条件を追加
-            break
-        case 3:
-            // 他のソート条件を追加
-            break
-        default:
-            break
-        }
-        
-        tableView.reloadData()  // ソートされた結果をリロード
     }
 }
 

@@ -49,7 +49,16 @@ class FavoriteCollectionViewController: UIViewController {
                 self.updateData(entities: entities)
             }
         } failer: { [ weak self ] in
-            guard self != nil else { return }
+            guard let self else { return }
+            let alert = AlertUtlity.makeFetchErrorAlert
+            {
+                self.fetchList(shopIds: shopIds)
+            }
+            
+            DispatchQueue.main.async
+            {
+                self.present(alert, animated: true, completion: nil)
+            }
         }
 
     }
@@ -68,7 +77,9 @@ extension FavoriteCollectionViewController: UICollectionViewDelegate {
         let shopDetail = ShopDetailController()
         shopDetail.setup(shopEntity: shopEntities[indexPath.row])
         
+        shopDetail.hidesBottomBarWhenPushed = true
         
+        self.navigationController?.pushViewController(shopDetail, animated: true)
     }
 }
 

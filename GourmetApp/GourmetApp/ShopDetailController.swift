@@ -98,6 +98,9 @@ class ShopDetailController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        setup(shopEntity: shopEntity!)
+        
         tableView.register(UINib(nibName: CellName.ShopDetailCell, bundle: nil), forCellReuseIdentifier: CellName.ShopDetailCell)
         tableView.register(UINib(nibName: CellName.shopImageCell, bundle: nil), forCellReuseIdentifier: CellName.shopImageCell)
     }
@@ -153,20 +156,6 @@ extension ShopDetailController: UITableViewDelegate, UITableViewDataSource{
         
         return type == .shopImage ? makeShopImageCell(indexPath) : makeShopDetailCell(indexPath, cellType: type)
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let cellType = ShopDetailCellType(rawValue: indexPath.row) else {
-            return UITableView.automaticDimension
-        }
-
-        // 画像セルの場合は特定の高さを設定し、それ以外は自動的に決定
-        switch cellType {
-        case .shopImage:
-            return 100
-        default:
-            return UITableView.automaticDimension
-        }
-    }
 }
 
 extension ShopDetailController: shopImageCellDelegate {
@@ -174,17 +163,20 @@ extension ShopDetailController: shopImageCellDelegate {
         
         guard let shopId = shopEntity?.shopId else { return }
     
-        // お気に入りボタンが押されたときの処理をここに書く
-        if isAdd {
+        // お気に入りボタンが押されたときの処理
+        if isAdd 
+        {
             if !UserDefaultsManager.addShopId(shopId) {
+                // お気に入りが20件を超えた場合
+                DispatchQueue.main.async 
+                { [ weak self ] in
+                    guard let self else { return }
+                    self.present(AlertUtlity.makeFavoriteMaxAlert(), animated: true, completion: nil)
+                }
                 return
             }
-            
-            print("お気に入りに追加")
         } else {
             UserDefaultsManager.deleatShopId(shopId)
-            
-            print("お気に入りから削除")
         }
         updateIsFavorite()
         tableView.reloadData()
