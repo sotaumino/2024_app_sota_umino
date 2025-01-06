@@ -16,9 +16,7 @@
 		C9B076CE2CA2AD4E00A253D2 /* ShopImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */; };
 		C9B076CF2CA2AD4E00A253D2 /* ShopImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B076CC2CA2AD4E00A253D2 /* ShopImageCell.swift */; };
 		C9D3CD972C800CAA000D0615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CD962C800CAA000D0615 /* AppDelegate.swift */; };
-		C9D3CD9B2C800CAA000D0615 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CD9A2C800CAA000D0615 /* ViewController.swift */; };
 		C9D3CDA02C800CAC000D0615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9D3CD9F2C800CAC000D0615 /* Assets.xcassets */; };
-		C9D3CDA32C800CAC000D0615 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C9D3CDA22C800CAC000D0615 /* Base */; };
 		C9D3CDAE2C800CAC000D0615 /* GourmetAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CDAD2C800CAC000D0615 /* GourmetAppTests.swift */; };
 		C9D3CDB82C800CAD000D0615 /* GourmetAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CDB72C800CAD000D0615 /* GourmetAppUITests.swift */; };
 		C9D3CDBA2C800CAD000D0615 /* GourmetAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3CDB92C800CAD000D0615 /* GourmetAppUITestsLaunchTests.swift */; };
@@ -98,9 +96,7 @@
 		C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopImageCell.xib; sourceTree = "<group>"; };
 		C9D3CD932C800CAA000D0615 /* GourmetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GourmetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D3CD962C800CAA000D0615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C9D3CD9A2C800CAA000D0615 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C9D3CD9F2C800CAC000D0615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9D3CDA22C800CAC000D0615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C9D3CDA42C800CAC000D0615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9D3CDA92C800CAC000D0615 /* GourmetAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GourmetAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D3CDAD2C800CAC000D0615 /* GourmetAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GourmetAppTests.swift; sourceTree = "<group>"; };
@@ -172,6 +168,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C982971C2D2B7A8F00568A69 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */,
+				C9D6DB352C9C1F9A003D896A /* CouponController.xib */,
+				C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */,
+				C9D6DB372C9C1F9A003D896A /* ShopDetailController.xib */,
+				C9D3CDE02C800FDE000D0615 /* SearchResultController.swift */,
+				C9D3CDE12C800FDE000D0615 /* SearchResultController.xib */,
+				C9D3CDE42C8041FF000D0615 /* TabBarController.swift */,
+				C9D3CDE62C804779000D0615 /* FavoriteCollectionViewController.swift */,
+				C9D3CDE72C804779000D0615 /* FavoriteCollectionViewController.xib */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C982971D2D2B7ACA00568A69 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				C9D6DB392C9C1F9A003D896A /* ShopDetailCell.swift */,
+				C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */,
+				C9D3CDDC2C800EB2000D0615 /* ListCell.swift */,
+				C9D3CDDD2C800EB2000D0615 /* ListCell.xib */,
+				C9B076CC2CA2AD4E00A253D2 /* ShopImageCell.swift */,
+				C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */,
+				C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */,
+				C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		C982971E2D2B7AD100568A69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9A741F12CAA910800E90ECD /* UserDefaultsManager.swift */,
+				C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C982971F2D2B7BBE00568A69 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C9D6DB432C9C1F9B003D896A /* CouponUrlEntity.swift */,
+				C9D6DB3B2C9C1F9A003D896A /* GenreEntity.swift */,
+				C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */,
+				C9B076CA2CA174B800A253D2 /* PhotoEntity.swift */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		C98297202D2B7C7400568A69 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				C9D6DB402C9C1F9B003D896A /* Secret.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		C98E85F72D2B7CE80075376A /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C9549A422CEC580B00899608 /* AlertUtlity.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		C98E85F82D2B7D670075376A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C9D6DB362C9C1F9A003D896A /* URL+Add.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		C9D3CD8A2C800CAA000D0615 = {
 			isa = PBXGroup;
 			children = (
@@ -197,38 +268,17 @@
 		C9D3CD952C800CAA000D0615 /* GourmetApp */ = {
 			isa = PBXGroup;
 			children = (
-				C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */,
-				C9D6DB352C9C1F9A003D896A /* CouponController.xib */,
-				C9D6DB432C9C1F9B003D896A /* CouponUrlEntity.swift */,
-				C9D6DB3B2C9C1F9A003D896A /* GenreEntity.swift */,
-				C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */,
-				C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */,
-				C9B076CA2CA174B800A253D2 /* PhotoEntity.swift */,
+				C98E85F82D2B7D670075376A /* Constants */,
+				C98E85F72D2B7CE80075376A /* Utility */,
+				C98297202D2B7C7400568A69 /* Secret */,
+				C982971F2D2B7BBE00568A69 /* Entity */,
+				C982971E2D2B7AD100568A69 /* Model */,
+				C982971D2D2B7ACA00568A69 /* VIew */,
+				C982971C2D2B7A8F00568A69 /* Controller */,
 				C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */,
-				C9D6DB402C9C1F9B003D896A /* Secret.swift */,
-				C9D6DB392C9C1F9A003D896A /* ShopDetailCell.swift */,
-				C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */,
-				C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */,
-				C9A741F12CAA910800E90ECD /* UserDefaultsManager.swift */,
-				C9D6DB372C9C1F9A003D896A /* ShopDetailController.xib */,
-				C9D6DB362C9C1F9A003D896A /* URL+Add.swift */,
 				C9D3CD962C800CAA000D0615 /* AppDelegate.swift */,
-				C9D3CDE02C800FDE000D0615 /* SearchResultController.swift */,
-				C9D3CDE12C800FDE000D0615 /* SearchResultController.xib */,
-				C9549A422CEC580B00899608 /* AlertUtlity.swift */,
-				C9D3CDDC2C800EB2000D0615 /* ListCell.swift */,
-				C9D3CDDD2C800EB2000D0615 /* ListCell.xib */,
-				C9B076CC2CA2AD4E00A253D2 /* ShopImageCell.swift */,
-				C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */,
-				C9D3CD9A2C800CAA000D0615 /* ViewController.swift */,
 				C9D3CD9F2C800CAC000D0615 /* Assets.xcassets */,
-				C9D3CDA12C800CAC000D0615 /* LaunchScreen.storyboard */,
 				C9D3CDA42C800CAC000D0615 /* Info.plist */,
-				C9D3CDE42C8041FF000D0615 /* TabBarController.swift */,
-				C9D3CDE62C804779000D0615 /* FavoriteCollectionViewController.swift */,
-				C9D3CDE72C804779000D0615 /* FavoriteCollectionViewController.xib */,
-				C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */,
-				C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */,
 			);
 			path = GourmetApp;
 			sourceTree = "<group>";
@@ -377,7 +427,6 @@
 				C9D3CDE92C804779000D0615 /* FavoriteCollectionViewController.xib in Resources */,
 				C9D6DB4C2C9C1F9B003D896A /* ShopDetailCell.xib in Resources */,
 				C9D6DB462C9C1F9B003D896A /* ShopDetailController.xib in Resources */,
-				C9D3CDA32C800CAC000D0615 /* Base in Resources */,
 				C9B076CE2CA2AD4E00A253D2 /* ShopImageCell.xib in Resources */,
 				C9D6DB442C9C1F9B003D896A /* CouponController.xib in Resources */,
 				C9D3CDE32C800FDE000D0615 /* SearchResultController.xib in Resources */,
@@ -510,7 +559,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D3CD9B2C800CAA000D0615 /* ViewController.swift in Sources */,
 				C9D6DB4F2C9C1F9B003D896A /* Secret.swift in Sources */,
 				C9D6DB502C9C1F9B003D896A /* GourmetSearchFetcher.swift in Sources */,
 				C9D6DB4D2C9C1F9B003D896A /* CouponController.swift in Sources */,
@@ -565,17 +613,6 @@
 			targetProxy = C9D3CDB42C800CAD000D0615 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C9D3CDA12C800CAC000D0615 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C9D3CDA22C800CAC000D0615 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C9D3CDBB2C800CAD000D0615 /* Debug */ = {
