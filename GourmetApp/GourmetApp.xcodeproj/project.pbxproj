@@ -35,7 +35,6 @@
 		C9D6DB4B2C9C1F9B003D896A /* GourmetSearchShopEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */; };
 		C9D6DB4C2C9C1F9B003D896A /* ShopDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */; };
 		C9D6DB4D2C9C1F9B003D896A /* CouponController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */; };
-		C9D6DB4E2C9C1F9B003D896A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */; };
 		C9D6DB4F2C9C1F9B003D896A /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB402C9C1F9B003D896A /* Secret.swift */; };
 		C9D6DB502C9C1F9B003D896A /* GourmetSearchFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */; };
 		C9D6DB512C9C1F9B003D896A /* ShopDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */; };
@@ -118,7 +117,6 @@
 		C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetSearchShopEntity.swift; sourceTree = "<group>"; };
 		C9D6DB3D2C9C1F9B003D896A /* ShopDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopDetailCell.xib; sourceTree = "<group>"; };
 		C9D6DB3E2C9C1F9B003D896A /* CouponController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouponController.swift; sourceTree = "<group>"; };
-		C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C9D6DB402C9C1F9B003D896A /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GourmetSearchFetcher.swift; sourceTree = "<group>"; };
 		C9D6DB422C9C1F9B003D896A /* ShopDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopDetailController.swift; sourceTree = "<group>"; };
@@ -181,7 +179,7 @@
 				C9D3CDE62C804779000D0615 /* FavoriteCollectionViewController.swift */,
 				C9D3CDE72C804779000D0615 /* FavoriteCollectionViewController.xib */,
 			);
-			name = Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C982971D2D2B7ACA00568A69 /* VIew */ = {
@@ -197,6 +195,7 @@
 				C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */,
 			);
 			name = VIew;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C982971E2D2B7AD100568A69 /* Model */ = {
@@ -206,6 +205,7 @@
 				C9D6DB412C9C1F9B003D896A /* GourmetSearchFetcher.swift */,
 			);
 			name = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C982971F2D2B7BBE00568A69 /* Entity */ = {
@@ -216,7 +216,7 @@
 				C9D6DB3C2C9C1F9A003D896A /* GourmetSearchShopEntity.swift */,
 				C9B076CA2CA174B800A253D2 /* PhotoEntity.swift */,
 			);
-			name = Entity;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		C98297202D2B7C7400568A69 /* Secret */ = {
@@ -271,11 +271,10 @@
 				C98E85F82D2B7D670075376A /* Constants */,
 				C98E85F72D2B7CE80075376A /* Utility */,
 				C98297202D2B7C7400568A69 /* Secret */,
-				C982971F2D2B7BBE00568A69 /* Entity */,
 				C982971E2D2B7AD100568A69 /* Model */,
+				C982971F2D2B7BBE00568A69 /* Entity */,
 				C982971D2D2B7ACA00568A69 /* VIew */,
 				C982971C2D2B7A8F00568A69 /* Controller */,
-				C9D6DB3F2C9C1F9B003D896A /* SceneDelegate.swift */,
 				C9D3CD962C800CAA000D0615 /* AppDelegate.swift */,
 				C9D3CD9F2C800CAC000D0615 /* Assets.xcassets */,
 				C9D3CDA42C800CAC000D0615 /* Info.plist */,
@@ -571,7 +570,6 @@
 				C9D3CDE52C8041FF000D0615 /* TabBarController.swift in Sources */,
 				C9D6DB482C9C1F9B003D896A /* ShopDetailCell.swift in Sources */,
 				C9D6DB4B2C9C1F9B003D896A /* GourmetSearchShopEntity.swift in Sources */,
-				C9D6DB4E2C9C1F9B003D896A /* SceneDelegate.swift in Sources */,
 				C9B076CF2CA2AD4E00A253D2 /* ShopImageCell.swift in Sources */,
 				C9D6DB522C9C1F9B003D896A /* CouponUrlEntity.swift in Sources */,
 				C9D6DB452C9C1F9B003D896A /* URL+Add.swift in Sources */,
