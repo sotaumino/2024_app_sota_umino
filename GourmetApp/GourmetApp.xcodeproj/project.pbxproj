@@ -232,7 +232,7 @@
 			children = (
 				C9549A422CEC580B00899608 /* AlertUtlity.swift */,
 			);
-			name = Utility;
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		C98E85F82D2B7D670075376A /* Constants */ = {
