@@ -1,0 +1,14 @@
+Target dependency graph (6 targets)
+Target 'Pods-GourmetAppTests' in project 'Pods'
+➜ Explicit dependency on target 'Pods-GourmetApp' in project 'Pods'
+Target 'Pods-GourmetApp-GourmetAppUITests' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire' in project 'Pods'
+➜ Explicit dependency on target 'AlamofireImage' in project 'Pods'
+Target 'Pods-GourmetApp' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire' in project 'Pods'
+➜ Explicit dependency on target 'AlamofireImage' in project 'Pods'
+Target 'AlamofireImage' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire' in project 'Pods'
+Target 'Alamofire' in project 'Pods'
+➜ Explicit dependency on target 'Alamofire-Alamofire' in project 'Pods'
+Target 'Alamofire-Alamofire' in project 'Pods' (no dependencies)

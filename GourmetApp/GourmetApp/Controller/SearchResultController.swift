@@ -52,9 +52,17 @@ class SearchResultController: UIViewController {
         GourmetSearchFetcher().fetchForShopName(searchText, selectedSortIndex: selectedSortIndex) { [weak self] entities in
             guard let self else { return }
             DispatchQueue.main.async {
-                print("取得したデータ: \(entities)")
-                self.shopEntities = entities
-                self.tableView.reloadData()
+                
+                if entities.isEmpty
+                {
+                    let noResultsAlert = AlertUtlity.makeFetchNoResultsAlert()
+                    self.present(noResultsAlert, animated: true, completion: nil)
+                }
+                else
+                {
+                    self.shopEntities = entities
+                    self.tableView.reloadData()
+                }
             }
         } failure: { [weak self] in
             guard let self else { return }

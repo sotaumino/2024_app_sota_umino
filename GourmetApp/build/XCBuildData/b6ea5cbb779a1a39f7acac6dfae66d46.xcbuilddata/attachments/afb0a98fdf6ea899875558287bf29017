@@ -1,0 +1,220 @@
+{
+  "" : {
+    "const-values" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master.swiftconstvalues",
+    "dependencies" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master.d",
+    "diagnostics" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master.dia",
+    "emit-module-dependencies" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master-emit-module.dia",
+    "swift-dependencies" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire-master.swiftdeps"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/AFError.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AFError.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AFError.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AFError.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/DataRequest.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataRequest.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataRequest.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataRequest.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/DataStreamRequest.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataStreamRequest.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataStreamRequest.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DataStreamRequest.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/DownloadRequest.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DownloadRequest.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DownloadRequest.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DownloadRequest.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/HTTPHeaders.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPHeaders.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPHeaders.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPHeaders.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/HTTPMethod.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPMethod.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPMethod.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/HTTPMethod.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/Notifications.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Notifications.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Notifications.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Notifications.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/ParameterEncoder.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoder.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoder.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoder.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/ParameterEncoding.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoding.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoding.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ParameterEncoding.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/Protected.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Protected.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Protected.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Protected.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/Request.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Request.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Request.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Request.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/RequestTaskMap.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestTaskMap.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestTaskMap.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestTaskMap.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/Response.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Response.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Response.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Response.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/Session.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Session.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Session.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Session.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/SessionDelegate.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/SessionDelegate.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/SessionDelegate.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/SessionDelegate.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/UploadRequest.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/UploadRequest.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/UploadRequest.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/UploadRequest.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/URLConvertible+URLRequestConvertible.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLConvertible+URLRequestConvertible.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLConvertible+URLRequestConvertible.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLConvertible+URLRequestConvertible.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Core/WebSocketRequest.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/WebSocketRequest.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/WebSocketRequest.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/WebSocketRequest.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/DispatchQueue+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DispatchQueue+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DispatchQueue+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/DispatchQueue+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/OperationQueue+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/OperationQueue+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/OperationQueue+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/OperationQueue+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/Result+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Result+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Result+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Result+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/StringEncoding+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/StringEncoding+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/StringEncoding+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/StringEncoding+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/URLRequest+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLRequest+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLRequest+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLRequest+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Extensions/URLSessionConfiguration+Alamofire.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLSessionConfiguration+Alamofire.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLSessionConfiguration+Alamofire.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLSessionConfiguration+Alamofire.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/AlamofireExtended.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AlamofireExtended.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AlamofireExtended.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AlamofireExtended.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/AuthenticationInterceptor.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AuthenticationInterceptor.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AuthenticationInterceptor.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/AuthenticationInterceptor.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/CachedResponseHandler.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/CachedResponseHandler.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/CachedResponseHandler.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/CachedResponseHandler.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/Combine.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Combine.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Combine.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Combine.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/Concurrency.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Concurrency.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Concurrency.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Concurrency.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/EventMonitor.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/EventMonitor.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/EventMonitor.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/EventMonitor.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/MultipartFormData.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartFormData.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartFormData.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartFormData.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/MultipartUpload.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartUpload.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartUpload.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/MultipartUpload.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/NetworkReachabilityManager.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/NetworkReachabilityManager.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/NetworkReachabilityManager.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/NetworkReachabilityManager.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/RedirectHandler.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RedirectHandler.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RedirectHandler.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RedirectHandler.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/RequestCompression.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestCompression.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestCompression.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestCompression.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/RequestInterceptor.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestInterceptor.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestInterceptor.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RequestInterceptor.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/ResponseSerialization.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ResponseSerialization.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ResponseSerialization.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ResponseSerialization.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/RetryPolicy.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RetryPolicy.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RetryPolicy.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/RetryPolicy.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/ServerTrustEvaluation.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ServerTrustEvaluation.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ServerTrustEvaluation.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/ServerTrustEvaluation.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/URLEncodedFormEncoder.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLEncodedFormEncoder.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLEncodedFormEncoder.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/URLEncodedFormEncoder.o"
+  },
+  "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/Pods/Alamofire/Source/Features/Validation.swift" : {
+    "index-unit-output-path" : "/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Validation.o",
+    "llvm-bc" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Validation.bc",
+    "object" : "/Users/sota.umino/Documents/git/2024_app_sota_umino/GourmetApp/build/Pods.build/Release-iphoneos/Alamofire.build/Objects-normal/arm64/Validation.o"
+  }
+}

@@ -9,6 +9,17 @@ import UIKit
 
 final internal class AlertUtlity: NSObject 
 {
+    // 検索結果0件時のアラート作成
+    class func makeFetchNoResultsAlert() -> UIAlertController
+    {
+        let msg = "ヒットする店舗はありませんでした。"
+        
+        let alert = UIAlertController(title: "0件", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        return alert
+    }
+    
     // お気に入り上限時のアラート作成
     class func makeFavoriteMaxAlert() -> UIAlertController
     {
