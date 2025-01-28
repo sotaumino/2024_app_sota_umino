@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopDetailController" customModule="App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShopDetailController" customModule="GourmetApp" customModuleProvider="target">
             <connections>
                 <outlet property="couponButton" destination="JJz-rb-K4a" id="4Bp-kF-Dls"/>
                 <outlet property="tableView" destination="Ygi-DB-zcJ" id="YtY-sv-UEk"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ygi-DB-zcJ" secondAttribute="bottom" id="8xU-NI-5eP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ygi-DB-zcJ" secondAttribute="trailing" id="Tjb-bJ-1AR"/>
             </constraints>
-            <point key="canvasLocation" x="129" y="-12"/>
+            <point key="canvasLocation" x="127.48091603053435" y="-12.67605633802817"/>
         </view>
     </objects>
     <resources>

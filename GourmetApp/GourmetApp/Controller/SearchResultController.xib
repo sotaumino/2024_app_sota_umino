@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchResultController" customModule="GourmetApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="5xy-Ka-e6v" id="Soq-m1-ZJP"/>
                 <outlet property="searchBar" destination="Oxs-hq-rXw" id="1ao-ec-rBa"/>
                 <outlet property="tableView" destination="fh7-AP-6NN" id="TAH-EM-10h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="BKG-5b-Q62"/>
@@ -32,6 +33,10 @@
                         <outlet property="delegate" destination="-1" id="QbS-3a-gLE"/>
                     </connections>
                 </searchBar>
+                <activityIndicatorView opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5xy-Ka-e6v">
+                    <rect key="frame" x="0.0" y="44" width="393" height="808"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -45,7 +50,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fh7-AP-6NN" secondAttribute="bottom" id="iuc-qJ-d5y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fh7-AP-6NN" secondAttribute="trailing" id="tdm-IB-Io1"/>
             </constraints>
-            <point key="canvasLocation" x="132" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
         </view>
     </objects>
     <resources>

@@ -4,16 +4,22 @@ class SearchResultController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var shopEntities = [GourmetSearchShopEntity]()
     
     let sortOptions = ["店名かな順", "ジャンルコード順", "小エリアコード順", "おススメ順"]
     
     var selectedSortOptionIndex: Int = 3
+
+    var loadingOverlay: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupActivityIndicator()
+        setupLoadingOverlay()
+        
         self.navigationItem.backButtonTitle = "Back"
         
         // ナビゲーションバーのタイトルを設定
@@ -41,17 +47,78 @@ class SearchResultController: UIViewController {
         super.init(coder: coder)
     }
     
+    func setupActivityIndicator()
+    {
+        // インジケーターの表示・非表示を自動で切り替え
+        activityIndicator.hidesWhenStopped = true
+        // インジケータを中央に配置
+        activityIndicator.center = view.center
+        
+        activityIndicator.stopAnimating()
+    }
+    
+    func setupLoadingOverlay()
+    {
+        loadingOverlay = UIView()
+        loadingOverlay.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        // AutoLayoutの制約を適応しないように設定
+        loadingOverlay.translatesAutoresizingMaskIntoConstraints = false
+        loadingOverlay.isHidden = true
+        
+        loadingOverlay.addSubview(activityIndicator)
+        view.addSubview(loadingOverlay)
+        
+        // オーバーレイビューの制約を設定（tableView全体を覆う）
+        NSLayoutConstraint.activate([
+            loadingOverlay.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
+            loadingOverlay.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
+            loadingOverlay.topAnchor.constraint(equalTo: tableView.topAnchor),
+            loadingOverlay.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
+        ])
+    }
+    
+    // インジケーター開始
+    func startIndicator()
+    {
+        DispatchQueue.main.async {
+            // オーバーレイビューを表示
+            self.loadingOverlay.isHidden = false
+            // インジケーターを開始
+            self.activityIndicator.startAnimating()
+            // 検索バーを無効化
+            self.searchBar.isUserInteractionEnabled = false
+        }
+    }
+    
+    // インジケーター終了
+    func stopIndicator()
+    {
+        DispatchQueue.main.async {
+            // インジケーターを終了
+            self.activityIndicator.stopAnimating()
+            // オーバーレイビューを非表示
+            self.loadingOverlay.isHidden = true
+            // サーチバーを有効化
+            self.searchBar.isUserInteractionEnabled = true
+        }
+    }
+    
     func fetchList(searchText: String){
         guard !searchText.isEmpty else { return }
         
         shopEntities = []
         tableView.reloadData()
         
+        // インジゲーターを表示
+        startIndicator()
+        
         let selectedSortIndex = selectedSortOptionIndex
         
         GourmetSearchFetcher().fetchForShopName(searchText, selectedSortIndex: selectedSortIndex) { [weak self] entities in
             guard let self else { return }
             DispatchQueue.main.async {
+                // インジケーターを非表示
+                self.stopIndicator()
                 
                 if entities.isEmpty
                 {
@@ -65,14 +132,14 @@ class SearchResultController: UIViewController {
                 }
             }
         } failure: { [weak self] in
-            guard let self else { return }
-            let alert = AlertUtlity.makeFetchErrorAlert
-            {
-                self.fetchList(searchText: searchText)
-            }
-            
-            DispatchQueue.main.async
-            {
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                // インジケータを非表示
+                self.stopIndicator()
+
+                let alert = AlertUtlity.makeFetchErrorAlert {
+                    self.fetchList(searchText: searchText)
+                }
                 self.present(alert, animated: true, completion: nil)
             }
         }
