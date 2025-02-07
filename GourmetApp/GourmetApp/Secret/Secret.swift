@@ -18,6 +18,8 @@ struct CellName {
     static let shopImageCell = "ShopImageCell"
     static let ShopDetailCell = "ShopDetailCell"
     static let FavoriteViewCell = "FavoriteViewCell"
+    static let ShopDetailNameCell = "ShopDetailNameCell"
+    static let RecommendViewCell = "RecommendViewCell"
 }
 
 //  struct UDKey {

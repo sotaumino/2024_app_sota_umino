@@ -9,7 +9,8 @@ import UIKit
 
 enum ShopDetailCellType: Int, CaseIterable {
     case shopImage
-    case genre
+    case shopDetailName
+    case recommend
     case access
     case adress
     case privateRoom
@@ -24,8 +25,10 @@ enum ShopDetailCellType: Int, CaseIterable {
         switch self {
         case .shopImage: 
             return "店舗画像"
-        case .genre:
-            return "ジャンル"
+        case .shopDetailName:
+            return ""
+        case .recommend:
+            return ""
         case .access:
             return "交通アクセス"
         case .adress:
@@ -54,8 +57,10 @@ enum ShopDetailCellType: Int, CaseIterable {
         switch self {
         case .shopImage:
             result = nil
-        case .genre:
-            result = entity.genre?.name
+        case .shopDetailName:
+            return ""
+        case .recommend:
+            return ""
         case .access:
             result = entity.access
         case .adress:
@@ -92,7 +97,7 @@ class ShopDetailController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.title = shopEntity?.name
+        self.title = shopEntity?.shopName
         
         self.couponButton.isHidden = self.isHiddenCouponButton()
         
@@ -103,6 +108,8 @@ class ShopDetailController: UIViewController {
         
         tableView.register(UINib(nibName: CellName.ShopDetailCell, bundle: nil), forCellReuseIdentifier: CellName.ShopDetailCell)
         tableView.register(UINib(nibName: CellName.shopImageCell, bundle: nil), forCellReuseIdentifier: CellName.shopImageCell)
+        tableView.register(UINib(nibName: CellName.ShopDetailNameCell, bundle: nil), forCellReuseIdentifier: CellName.ShopDetailNameCell)
+        tableView.register(UINib(nibName: CellName.RecommendViewCell, bundle: nil), forCellReuseIdentifier: CellName.RecommendViewCell)
     }
     
     func setup(shopEntity entity: GourmetSearchShopEntity){
@@ -131,34 +138,69 @@ class ShopDetailController: UIViewController {
     }
     
     // 店舗画像Cell作成
-    func makeShopImageCell(_ indexPath: IndexPath) -> UITableViewCell {
+    func makeShopImageCell(_ indexPath: IndexPath) -> UITableViewCell 
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellName.shopImageCell, for: indexPath) as? ShopImageCell
-        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.mobileSmall)!, isFavorite: isFavorite, delegate: self)
+        cell?.setupShopImageView(imageUrlString: (shopEntity?.photo?.mobileSmall)!)
         
         return cell ?? UITableViewCell()
     }
     // 店舗詳細Cell作成
-    func makeShopDetailCell(_ indexPath: IndexPath, cellType: ShopDetailCellType) -> UITableViewCell {
+    func makeShopDetailCell(_ indexPath: IndexPath, cellType: ShopDetailCellType) -> UITableViewCell 
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellName.ShopDetailCell, for: indexPath) as? ShopDetailCell
         cell?.setup(title: cellType.title(), detail: cellType.detail(entity: shopEntity))
         return cell ?? UITableViewCell()
     }
+    
+    // 店舗名・ジャンル・キャッチコピーCell作成
+    private func makeShopDetailNameCell(_ indexPath: IndexPath) -> UITableViewCell
+    {
+        let shopDetailNameCell = tableView.dequeueReusableCell(withIdentifier: CellName.ShopDetailNameCell, for: indexPath) as? ShopDetailNameCell
+        
+        if let shopName = shopEntity?.shopName,
+               let genre = shopEntity?.genre?.name,
+               let catchCopy = shopEntity?.catchText {
+            shopDetailNameCell!.setUp(shopName: shopName, genre: genre, catchCopy: catchCopy, bFavorite: isFavorite, delegate: self)
+            }
+        
+        return shopDetailNameCell ?? UITableViewCell()
+    }
+    
+    // おすすめ情報Cell作成
+    private func makeRecommendViewCell(_ indexPath: IndexPath) -> UITableViewCell
+    {
+        let recommendViewCell = tableView.dequeueReusableCell(withIdentifier: CellName.RecommendViewCell, for: indexPath) as? RecommendViewCell
+        
+        recommendViewCell?.setUp(freeDrink: (shopEntity?.freeDrink)!, freeFood: shopEntity?.freeDrink ?? "", privateRoom: shopEntity?.privateRoom ?? "", horigotatu: shopEntity?.horigotatsu ?? "", tatami: (shopEntity?.tatami)!)
+        
+        return recommendViewCell ?? UITableViewCell()
+    }
 }
-
 
 extension ShopDetailController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return shopEntity != nil ? 10 : 0
+        return ShopDetailCellType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let type = ShopDetailCellType(rawValue: indexPath.row) else { return UITableViewCell() }
         
-        return type == .shopImage ? makeShopImageCell(indexPath) : makeShopDetailCell(indexPath, cellType: type)
+        switch type
+        {
+            case .shopImage:
+                return makeShopImageCell(indexPath)
+            case .shopDetailName:
+                return makeShopDetailNameCell(indexPath)
+            case .recommend:
+                return makeRecommendViewCell(indexPath)
+            default:
+                return makeShopDetailCell(indexPath, cellType: type)
+        }
     }
 }
 
-extension ShopDetailController: shopImageCellDelegate {
+extension ShopDetailController: ShopDetailNameCellDelegate {
     func onTapFavoriteButton(isAdd: Bool) {
         
         guard let shopId = shopEntity?.shopId else { return }

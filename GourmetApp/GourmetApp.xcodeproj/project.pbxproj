@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0AFC15294C7DA788837220EA /* Pods_GourmetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1FBFF4A68E383D35C4DFA8 /* Pods_GourmetApp.framework */; };
+		C90D57582D490B9400C773EF /* ShopDetailNameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90D57572D490B9400C773EF /* ShopDetailNameCell.xib */; };
+		C90D57592D490B9400C773EF /* ShopDetailNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90D57562D490B9400C773EF /* ShopDetailNameCell.swift */; };
+		C90D575C2D4E35A200C773EF /* RecommendViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90D575B2D4E35A200C773EF /* RecommendViewCell.xib */; };
+		C90D575D2D4E35A200C773EF /* RecommendViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90D575A2D4E35A200C773EF /* RecommendViewCell.swift */; };
 		C92152B22CB79A8600BE8551 /* FavoriteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */; };
 		C92152B32CB79A8600BE8551 /* FavoriteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */; };
 		C9549A432CEC580B00899608 /* AlertUtlity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9549A422CEC580B00899608 /* AlertUtlity.swift */; };
@@ -81,6 +85,10 @@
 		A4FE4F32838A1440D4556C0F /* Pods-GourmetAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GourmetAppTests/Pods-GourmetAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AAA720E97614AD5F01CD996C /* Pods-GourmetApp-GourmetAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetApp-GourmetAppUITests.release.xcconfig"; path = "Target Support Files/Pods-GourmetApp-GourmetAppUITests/Pods-GourmetApp-GourmetAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AE3AC3004D4B0E752FADEE18 /* Pods-GourmetAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GourmetAppTests.release.xcconfig"; path = "Target Support Files/Pods-GourmetAppTests/Pods-GourmetAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C90D57562D490B9400C773EF /* ShopDetailNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopDetailNameCell.swift; sourceTree = "<group>"; };
+		C90D57572D490B9400C773EF /* ShopDetailNameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopDetailNameCell.xib; sourceTree = "<group>"; };
+		C90D575A2D4E35A200C773EF /* RecommendViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendViewCell.swift; sourceTree = "<group>"; };
+		C90D575B2D4E35A200C773EF /* RecommendViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendViewCell.xib; sourceTree = "<group>"; };
 		C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewCell.swift; sourceTree = "<group>"; };
 		C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewCell.xib; sourceTree = "<group>"; };
 		C9549A422CEC580B00899608 /* AlertUtlity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtlity.swift; sourceTree = "<group>"; };
@@ -193,6 +201,10 @@
 				C9B076CD2CA2AD4E00A253D2 /* ShopImageCell.xib */,
 				C92152B02CB79A8600BE8551 /* FavoriteViewCell.swift */,
 				C92152B12CB79A8600BE8551 /* FavoriteViewCell.xib */,
+				C90D57562D490B9400C773EF /* ShopDetailNameCell.swift */,
+				C90D57572D490B9400C773EF /* ShopDetailNameCell.xib */,
+				C90D575A2D4E35A200C773EF /* RecommendViewCell.swift */,
+				C90D575B2D4E35A200C773EF /* RecommendViewCell.xib */,
 			);
 			name = VIew;
 			path = View;
@@ -425,9 +437,11 @@
 				C9D3CDA02C800CAC000D0615 /* Assets.xcassets in Resources */,
 				C9D3CDE92C804779000D0615 /* FavoriteCollectionViewController.xib in Resources */,
 				C9D6DB4C2C9C1F9B003D896A /* ShopDetailCell.xib in Resources */,
+				C90D57582D490B9400C773EF /* ShopDetailNameCell.xib in Resources */,
 				C9D6DB462C9C1F9B003D896A /* ShopDetailController.xib in Resources */,
 				C9B076CE2CA2AD4E00A253D2 /* ShopImageCell.xib in Resources */,
 				C9D6DB442C9C1F9B003D896A /* CouponController.xib in Resources */,
+				C90D575C2D4E35A200C773EF /* RecommendViewCell.xib in Resources */,
 				C9D3CDE32C800FDE000D0615 /* SearchResultController.xib in Resources */,
 				C92152B22CB79A8600BE8551 /* FavoriteViewCell.xib in Resources */,
 				C9D3CDDF2C800EB2000D0615 /* ListCell.xib in Resources */,
@@ -559,10 +573,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D6DB4F2C9C1F9B003D896A /* Secret.swift in Sources */,
+				C90D57592D490B9400C773EF /* ShopDetailNameCell.swift in Sources */,
 				C9D6DB502C9C1F9B003D896A /* GourmetSearchFetcher.swift in Sources */,
 				C9D6DB4D2C9C1F9B003D896A /* CouponController.swift in Sources */,
 				C9D3CD972C800CAA000D0615 /* AppDelegate.swift in Sources */,
 				C9A741F22CAA910800E90ECD /* UserDefaultsManager.swift in Sources */,
+				C90D575D2D4E35A200C773EF /* RecommendViewCell.swift in Sources */,
 				C9D6DB4A2C9C1F9B003D896A /* GenreEntity.swift in Sources */,
 				C9549A432CEC580B00899608 /* AlertUtlity.swift in Sources */,
 				C9D6DB512C9C1F9B003D896A /* ShopDetailController.swift in Sources */,

@@ -41,7 +41,7 @@ class ListCell: UITableViewCell {
             print("画像URLが存在しません")
         }
         
-        shopNameLabel.text = entity.name
+        shopNameLabel.text = entity.shopName
         
         genreLabel.text = entity.genre?.name
         
