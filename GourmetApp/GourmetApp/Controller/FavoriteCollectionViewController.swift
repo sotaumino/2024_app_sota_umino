@@ -9,8 +9,8 @@ import UIKit
 
 class FavoriteCollectionViewController: UIViewController {
     
-    @IBOutlet weak var favoriteCollectionView: UICollectionView!
-    @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
+    @IBOutlet private weak var favoriteCollectionView: UICollectionView!
+    @IBOutlet private weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     private var shopEntities = [GourmetSearchShopEntity]()
     

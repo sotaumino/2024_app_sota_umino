@@ -22,24 +22,24 @@ class RecommendViewCell: UITableViewCell {
     
     public func setUp(freeDrink: String, freeFood: String, privateRoom: String, horigotatu: String, tatami: String)
     {
-        if freeDrink.contains("あり") 
+        if !freeDrink.contains("あり")
         {
             FreeFoodStackView.backgroundColor = UIColor.gray
         }
             
-        if freeFood.contains("あり") {
+        if !freeFood.contains("あり") {
             FreeDrinkStackView.backgroundColor = UIColor.gray
         }
             
-        if privateRoom.contains("あり") {
+        if !privateRoom.contains("あり") {
             PrivateRoomStackView.backgroundColor = UIColor.gray
         }
         
-        if horigotatu.contains("あり") {
+        if !horigotatu.contains("あり") {
             HorigotatsuSatackView.backgroundColor = UIColor.gray
         }
         
-        if tatami.contains("あり") {
+        if !tatami.contains("あり") {
             zashikiStackView.backgroundColor = UIColor.gray
         }
     }

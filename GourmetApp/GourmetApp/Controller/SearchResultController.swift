@@ -38,6 +38,14 @@ class SearchResultController: UIViewController {
         
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if let selectedIndexPath = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: selectedIndexPath, animated: true)
+        }
+    }
+    
     // 初期化メソッドでxibをロード
     init() {
         super.init(nibName: "SearchResultController", bundle: nil)

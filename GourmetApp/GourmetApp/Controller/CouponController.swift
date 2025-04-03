@@ -10,9 +10,13 @@ import WebKit
 
 class CouponController: UIViewController {
 
-    var couponUrl: String?
+    private var couponUrl: String?
     
     @IBOutlet weak var webView: WKWebView!
+    
+    func setup(couponUrl: String) {
+        self.couponUrl = couponUrl
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

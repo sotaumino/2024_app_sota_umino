@@ -122,7 +122,7 @@ class ShopDetailController: UIViewController {
         
         guard let couponUrl = shopEntity?.couponUrls?.sp else { return }
         
-        couponController.couponUrl = couponUrl
+        couponController.setup(couponUrl: couponUrl)
         
         self.navigationController?.pushViewController(couponController, animated: true)
     }
@@ -161,7 +161,7 @@ class ShopDetailController: UIViewController {
         if let shopName = shopEntity?.shopName,
                let genre = shopEntity?.genre?.name,
                let catchCopy = shopEntity?.catchText {
-            shopDetailNameCell!.setUp(shopName: shopName, genre: genre, catchCopy: catchCopy, bFavorite: isFavorite, delegate: self)
+            shopDetailNameCell?.setUp(shopName: shopName, genre: genre, catchCopy: catchCopy, bFavorite: isFavorite, delegate: self)
             }
         
         return shopDetailNameCell ?? UITableViewCell()
