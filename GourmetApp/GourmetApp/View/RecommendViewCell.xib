@@ -50,6 +50,10 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="wineglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-Ur-h2v">
                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="120" height="61.666666666666671"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="cyB-uC-pqe"/>
+                                    <constraint firstAttribute="width" constant="120" id="y1u-qr-cTn"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="飲み放題" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pte-Lp-ykL">
                                 <rect key="frame" x="0.0" y="60" width="120" height="60"/>

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOK-QC-eXm">
-                        <rect key="frame" x="8" y="8" width="369" height="24"/>
+                        <rect key="frame" x="8.0000000000000036" y="8" width="51.333333333333343" height="24"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -29,16 +29,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-vA-NAZ">
-                        <rect key="frame" x="385" y="8" width="48" height="48"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-vA-NAZ">
+                        <rect key="frame" x="381" y="8" width="52" height="24"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="48" id="083-LW-ARc"/>
-                            <constraint firstAttribute="width" constant="48" id="k5e-Q0-0cy"/>
-                        </constraints>
                         <color key="tintColor" systemColor="systemFillColor"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system">
+                        <buttonConfiguration key="configuration" style="plain" image="star" catalog="system" buttonSize="small">
                             <backgroundConfiguration key="background">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="strokeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,17 +47,12 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="leading" secondItem="ZOK-QC-eXm" secondAttribute="trailing" constant="8" id="2nh-gZ-2X1"/>
                     <constraint firstItem="rSG-Eg-2NG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3LM-tP-7gw"/>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="leading" secondItem="ZOK-QC-eXm" secondAttribute="trailing" constant="8" id="5Ic-3D-LDF"/>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="7ZB-ro-yP5"/>
                     <constraint firstItem="ZOK-QC-eXm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="FWL-l5-Sti"/>
                     <constraint firstItem="ZOK-QC-eXm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Hoe-lI-BhA"/>
+                    <constraint firstAttribute="trailing" secondItem="3DL-vA-NAZ" secondAttribute="trailing" constant="8" id="Phf-yR-rkQ"/>
+                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QKk-3S-pDj"/>
                     <constraint firstAttribute="trailing" secondItem="rSG-Eg-2NG" secondAttribute="trailing" constant="8" id="QRZ-3j-6VP"/>
-                    <constraint firstAttribute="trailing" secondItem="3DL-vA-NAZ" secondAttribute="trailing" constant="8" id="fX1-MJ-Cs6"/>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ofp-0e-CaK"/>
-                    <constraint firstAttribute="trailing" secondItem="3DL-vA-NAZ" secondAttribute="trailing" constant="8" id="s1U-86-dy5"/>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="leading" secondItem="ZOK-QC-eXm" secondAttribute="trailing" constant="8" id="wSt-0u-ug9"/>
                     <constraint firstAttribute="bottom" secondItem="rSG-Eg-2NG" secondAttribute="bottom" constant="8" id="y1Y-vr-ZDN"/>
                     <constraint firstItem="rSG-Eg-2NG" firstAttribute="top" secondItem="ZOK-QC-eXm" secondAttribute="bottom" constant="8" id="y1u-79-KKg"/>
                 </constraints>
@@ -78,7 +69,7 @@
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

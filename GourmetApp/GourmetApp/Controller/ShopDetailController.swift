@@ -186,17 +186,24 @@ extension ShopDetailController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let type = ShopDetailCellType(rawValue: indexPath.row) else { return UITableViewCell() }
         
+        let cell: UITableViewCell
+        
         switch type
         {
             case .shopImage:
-                return makeShopImageCell(indexPath)
+                cell = makeShopImageCell(indexPath)
             case .shopDetailName:
-                return makeShopDetailNameCell(indexPath)
+                cell = makeShopDetailNameCell(indexPath)
             case .recommend:
-                return makeRecommendViewCell(indexPath)
+                cell = makeRecommendViewCell(indexPath)
             default:
-                return makeShopDetailCell(indexPath, cellType: type)
+                cell = makeShopDetailCell(indexPath, cellType: type)
         }
+        
+        // セルを選択しても灰色にならないように設定
+        cell.selectionStyle = .none
+        
+        return cell
     }
 }
 
