@@ -22,7 +22,7 @@ class CouponController: UIViewController {
         super.viewDidLoad()
 
         // 閉じるボタン
-        let closeButton = UIBarButtonItem(image: UIImage(systemName: "multiply"), style: .plain, target: self, action: #selector(onTapCloseButton(_:)))
+        let closeButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(onTapCloseButton(_:)))
         self.navigationItem.rightBarButtonItem = closeButton
         
         self.navigationItem.hidesBackButton = true

@@ -14,6 +14,8 @@ class SearchResultController: UIViewController {
 
     var loadingOverlay: UIView!
     
+    private var sortButton: UIBarButtonItem?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +27,7 @@ class SearchResultController: UIViewController {
         // ナビゲーションバーのタイトルを設定
         self.title = "検索結果一覧画面"
         
-        let sortButton = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(onTapSortButton))
+        sortButton = UIBarButtonItem(image: UIImage(systemName: "arrow.up.arrow.down"), style: .plain, target: self, action: #selector(onTapSortButton))
         self.navigationItem.rightBarButtonItem = sortButton
         
         searchBar.delegate = self
@@ -60,7 +62,7 @@ class SearchResultController: UIViewController {
         // インジケーターの表示・非表示を自動で切り替え
         activityIndicator.hidesWhenStopped = true
         // インジケータを中央に配置
-        activityIndicator.center = view.center
+        // activityIndicator.center = view.center
         
         activityIndicator.stopAnimating()
     }
@@ -116,6 +118,9 @@ class SearchResultController: UIViewController {
         
         shopEntities = []
         tableView.reloadData()
+        
+        //  ソートボタンを非表示にする
+        sortButton?.isEnabled = false
         
         // インジゲーターを表示
         startIndicator()
