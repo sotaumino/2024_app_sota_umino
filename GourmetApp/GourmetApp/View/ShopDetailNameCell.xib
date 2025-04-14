@@ -30,7 +30,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DL-vA-NAZ">
-                        <rect key="frame" x="67.333333333333371" y="8" width="365.66666666666663" height="28"/>
+                        <rect key="frame" x="388.33333333333337" y="8" width="44.666666666666629" height="28"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" systemColor="systemFillColor"/>
                         <state key="normal" title="Button"/>
@@ -48,7 +48,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="rSG-Eg-2NG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="3LM-tP-7gw"/>
-                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="leading" secondItem="ZOK-QC-eXm" secondAttribute="trailing" constant="8" id="7AT-qL-rJZ"/>
+                    <constraint firstItem="3DL-vA-NAZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZOK-QC-eXm" secondAttribute="trailing" constant="8" id="7AT-qL-rJZ"/>
                     <constraint firstItem="ZOK-QC-eXm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="FWL-l5-Sti"/>
                     <constraint firstItem="ZOK-QC-eXm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Hoe-lI-BhA"/>
                     <constraint firstAttribute="trailing" secondItem="3DL-vA-NAZ" secondAttribute="trailing" constant="8" id="Phf-yR-rkQ"/>
@@ -70,7 +70,7 @@
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
         <systemColor name="systemFillColor">
-            <color red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

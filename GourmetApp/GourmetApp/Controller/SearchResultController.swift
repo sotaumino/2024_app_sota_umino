@@ -11,8 +11,6 @@ class SearchResultController: UIViewController {
     let sortOptions = ["店名かな順", "ジャンルコード順", "小エリアコード順", "おススメ順"]
     
     var selectedSortOptionIndex: Int = 3
-
-    var loadingOverlay: UIView!
     
     private var sortButton: UIBarButtonItem?
     
@@ -20,7 +18,6 @@ class SearchResultController: UIViewController {
         super.viewDidLoad()
 
         setupActivityIndicator()
-        setupLoadingOverlay()
         
         self.navigationItem.backButtonTitle = "Back"
         
@@ -67,32 +64,10 @@ class SearchResultController: UIViewController {
         activityIndicator.stopAnimating()
     }
     
-    func setupLoadingOverlay()
-    {
-        loadingOverlay = UIView()
-        loadingOverlay.backgroundColor = UIColor(white: 0, alpha: 0.5)
-        // AutoLayoutの制約を適応しないように設定
-        loadingOverlay.translatesAutoresizingMaskIntoConstraints = false
-        loadingOverlay.isHidden = true
-        
-        loadingOverlay.addSubview(activityIndicator)
-        view.addSubview(loadingOverlay)
-        
-        // オーバーレイビューの制約を設定（tableView全体を覆う）
-        NSLayoutConstraint.activate([
-            loadingOverlay.leadingAnchor.constraint(equalTo: tableView.leadingAnchor),
-            loadingOverlay.trailingAnchor.constraint(equalTo: tableView.trailingAnchor),
-            loadingOverlay.topAnchor.constraint(equalTo: tableView.topAnchor),
-            loadingOverlay.bottomAnchor.constraint(equalTo: tableView.bottomAnchor),
-        ])
-    }
-    
     // インジケーター開始
     func startIndicator()
     {
         DispatchQueue.main.async {
-            // オーバーレイビューを表示
-            self.loadingOverlay.isHidden = false
             // インジケーターを開始
             self.activityIndicator.startAnimating()
             // 検索バーを無効化
@@ -106,8 +81,6 @@ class SearchResultController: UIViewController {
         DispatchQueue.main.async {
             // インジケーターを終了
             self.activityIndicator.stopAnimating()
-            // オーバーレイビューを非表示
-            self.loadingOverlay.isHidden = true
             // サーチバーを有効化
             self.searchBar.isUserInteractionEnabled = true
         }
