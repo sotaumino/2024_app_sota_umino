@@ -34,7 +34,7 @@
                     </connections>
                 </searchBar>
                 <activityIndicatorView opaque="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5xy-Ka-e6v">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,7 +51,7 @@
                 <constraint firstItem="5xy-Ka-e6v" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Qih-Bc-3Tx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fh7-AP-6NN" secondAttribute="trailing" id="USh-vb-nZk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fh7-AP-6NN" secondAttribute="bottom" id="c2C-7K-gP8"/>
-                <constraint firstItem="5xy-Ka-e6v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="eoo-7Y-JKx"/>
+                <constraint firstItem="5xy-Ka-e6v" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eoo-7Y-JKx"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fh7-AP-6NN" secondAttribute="bottom" id="iuc-qJ-d5y"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fh7-AP-6NN" secondAttribute="trailing" id="tdm-IB-Io1"/>
                 <constraint firstItem="5xy-Ka-e6v" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vY2-7h-rSs"/>

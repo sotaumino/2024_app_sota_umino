@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -38,11 +39,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="cgG-HJ-5fa"/>
+                            <constraint firstAttribute="width" constant="120" id="lxc-QN-aSo"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-z2-YPm" userLabel="FreeDrinkStackView">
                         <rect key="frame" x="80" y="8" width="120" height="120"/>
@@ -66,11 +66,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="XKQ-b0-pzM"/>
+                            <constraint firstAttribute="height" constant="120" id="fwX-ki-yOo"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0rh-Lo-son" userLabel="PrivateRoomStackView">
                         <rect key="frame" x="8" y="136" width="120" height="120"/>
@@ -94,11 +93,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="DZV-m7-B5e"/>
+                            <constraint firstAttribute="width" constant="120" id="Ew9-aG-8wx"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PLT-Dl-trc" userLabel="ZashikiStackView">
                         <rect key="frame" x="288" y="136" width="120" height="120"/>
@@ -122,11 +120,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="10"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="3iM-D3-ouj"/>
+                            <constraint firstAttribute="width" constant="120" id="lyN-5f-ghz"/>
+                        </constraints>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fsX-7z-DN0" userLabel="HorigotatsuStackView">
                         <rect key="frame" x="144" y="136" width="128" height="120"/>
@@ -150,38 +147,127 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="kLZ-dC-374"/>
+                            <constraint firstAttribute="height" constant="120" id="rFC-3K-TX2"/>
+                        </constraints>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yjs-th-tbn">
+                        <rect key="frame" x="216" y="8" width="120" height="120"/>
+                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="5QP-jJ-IUM"/>
+                            <constraint firstAttribute="width" constant="120" id="Rw0-h5-7hr"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                 <integer key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </stackView>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8g0-KX-2v1">
+                        <rect key="frame" x="144" y="136" width="120" height="120"/>
+                        <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="O16-15-pPO"/>
+                            <constraint firstAttribute="height" constant="120" id="ZJZ-gJ-Inu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCP-vm-uDh">
+                        <rect key="frame" x="288" y="136" width="120" height="120"/>
+                        <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="71V-dG-4Xe"/>
+                            <constraint firstAttribute="width" constant="120" id="Ww0-3t-REe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JeR-Pf-XDf">
+                        <rect key="frame" x="8" y="136" width="120" height="120"/>
+                        <color key="backgroundColor" name="tertiaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="fhZ-qu-AFw"/>
+                            <constraint firstAttribute="height" constant="120" id="hbM-70-94h"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8M-fw-TUY">
+                        <rect key="frame" x="80" y="8" width="120" height="120"/>
+                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="0vu-Ri-IXW"/>
+                            <constraint firstAttribute="width" constant="120" id="TZE-cr-YcU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="EYp-oE-6kk" firstAttribute="leading" secondItem="A8M-fw-TUY" secondAttribute="trailing" constant="16" id="2LT-qW-y2l"/>
                     <constraint firstItem="EYp-oE-6kk" firstAttribute="leading" secondItem="ahZ-z2-YPm" secondAttribute="trailing" constant="16" id="2e8-nU-nNc"/>
+                    <constraint firstItem="A8M-fw-TUY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="5DW-W6-Tfm"/>
+                    <constraint firstAttribute="bottom" secondItem="tCP-vm-uDh" secondAttribute="bottom" constant="8" id="9eD-by-g14"/>
+                    <constraint firstItem="JeR-Pf-XDf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="A6X-bp-BMx"/>
                     <constraint firstItem="fsX-7z-DN0" firstAttribute="top" secondItem="EYp-oE-6kk" secondAttribute="bottom" constant="8" id="C0f-Yq-P11"/>
                     <constraint firstItem="ahZ-z2-YPm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="DAS-wI-YrE"/>
+                    <constraint firstAttribute="trailing" secondItem="tCP-vm-uDh" secondAttribute="trailing" constant="8" id="F8p-FL-bcT"/>
                     <constraint firstAttribute="bottom" secondItem="0rh-Lo-son" secondAttribute="bottom" constant="8" id="GGg-Dp-sp3"/>
                     <constraint firstAttribute="trailing" secondItem="EYp-oE-6kk" secondAttribute="trailing" constant="80" id="He0-RB-zYA"/>
+                    <constraint firstItem="PLT-Dl-trc" firstAttribute="leading" secondItem="8g0-KX-2v1" secondAttribute="trailing" constant="24" id="J6F-Ou-Xup"/>
                     <constraint firstItem="ahZ-z2-YPm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="Jxb-0n-p73"/>
                     <constraint firstItem="PLT-Dl-trc" firstAttribute="leading" secondItem="fsX-7z-DN0" secondAttribute="trailing" constant="16" id="LRJ-FY-uAh"/>
+                    <constraint firstItem="yjs-th-tbn" firstAttribute="leading" secondItem="ahZ-z2-YPm" secondAttribute="trailing" constant="16" id="ReQ-kV-bmY"/>
+                    <constraint firstItem="PLT-Dl-trc" firstAttribute="top" secondItem="yjs-th-tbn" secondAttribute="bottom" constant="8" id="SCU-QG-wfx"/>
+                    <constraint firstItem="JeR-Pf-XDf" firstAttribute="top" secondItem="ahZ-z2-YPm" secondAttribute="bottom" constant="8" id="SMv-6I-fkg"/>
+                    <constraint firstItem="yjs-th-tbn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Ufe-1a-FCY"/>
                     <constraint firstItem="EYp-oE-6kk" firstAttribute="leading" secondItem="ahZ-z2-YPm" secondAttribute="trailing" constant="16" id="W9y-Vt-4vm"/>
                     <constraint firstItem="PLT-Dl-trc" firstAttribute="top" secondItem="EYp-oE-6kk" secondAttribute="bottom" constant="8" id="WsV-zY-F0h"/>
+                    <constraint firstItem="fsX-7z-DN0" firstAttribute="leading" secondItem="JeR-Pf-XDf" secondAttribute="trailing" constant="16" id="XNy-kE-Rak"/>
+                    <constraint firstItem="8g0-KX-2v1" firstAttribute="top" secondItem="EYp-oE-6kk" secondAttribute="bottom" constant="8" id="YEd-cr-li7"/>
                     <constraint firstItem="fsX-7z-DN0" firstAttribute="leading" secondItem="0rh-Lo-son" secondAttribute="trailing" constant="16" id="YZv-qV-OsK"/>
+                    <constraint firstItem="tCP-vm-uDh" firstAttribute="leading" secondItem="fsX-7z-DN0" secondAttribute="trailing" constant="16" id="ZRW-wI-Jhf"/>
+                    <constraint firstItem="tCP-vm-uDh" firstAttribute="top" secondItem="EYp-oE-6kk" secondAttribute="bottom" constant="8" id="bHO-9R-Hzm"/>
                     <constraint firstAttribute="trailing" secondItem="PLT-Dl-trc" secondAttribute="trailing" constant="8" id="e72-kk-gcX"/>
                     <constraint firstItem="0rh-Lo-son" firstAttribute="top" secondItem="ahZ-z2-YPm" secondAttribute="bottom" constant="8" id="f0v-uu-E7h"/>
                     <constraint firstAttribute="bottom" secondItem="fsX-7z-DN0" secondAttribute="bottom" constant="8" id="g9l-sG-ML9"/>
+                    <constraint firstAttribute="bottom" secondItem="8g0-KX-2v1" secondAttribute="bottom" constant="8" id="hO0-r3-7VL"/>
+                    <constraint firstItem="0rh-Lo-son" firstAttribute="top" secondItem="A8M-fw-TUY" secondAttribute="bottom" constant="8" id="kYL-4v-OBH"/>
+                    <constraint firstAttribute="bottom" secondItem="JeR-Pf-XDf" secondAttribute="bottom" constant="8" id="kvb-Vp-gFh"/>
                     <constraint firstItem="0rh-Lo-son" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="luM-6b-HGU"/>
                     <constraint firstAttribute="bottom" secondItem="PLT-Dl-trc" secondAttribute="bottom" constant="8" id="m4f-L3-8lY"/>
+                    <constraint firstAttribute="trailing" secondItem="yjs-th-tbn" secondAttribute="trailing" constant="80" id="mxa-eG-X5v"/>
                     <constraint firstItem="EYp-oE-6kk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nRx-AL-9wY"/>
+                    <constraint firstItem="A8M-fw-TUY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="u8V-hh-FvN"/>
+                    <constraint firstItem="8g0-KX-2v1" firstAttribute="leading" secondItem="0rh-Lo-son" secondAttribute="trailing" constant="16" id="yR6-bp-Mvw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="FreeDrinkStackView" destination="ahZ-z2-YPm" id="Dhg-LI-dtO"/>
+                <outlet property="FreeDrinkView" destination="A8M-fw-TUY" id="nhh-Gd-OsE"/>
                 <outlet property="FreeFoodStackView" destination="EYp-oE-6kk" id="wUU-qw-VG9"/>
+                <outlet property="FreeFoodView" destination="yjs-th-tbn" id="1O5-Yk-bi3"/>
                 <outlet property="HorigotatsuSatackView" destination="fsX-7z-DN0" id="Nl9-1f-vrl"/>
+                <outlet property="HorigotatsuView" destination="8g0-KX-2v1" id="Ehr-yf-sIm"/>
                 <outlet property="PrivateRoomStackView" destination="0rh-Lo-son" id="YHn-Jr-P2H"/>
+                <outlet property="PrivateRoomView" destination="JeR-Pf-XDf" id="EGM-DG-Vf9"/>
+                <outlet property="ZashikiView" destination="tCP-vm-uDh" id="ip6-gm-7x6"/>
                 <outlet property="zashikiStackView" destination="PLT-Dl-trc" id="AMa-xd-Bf3"/>
             </connections>
             <point key="canvasLocation" x="109.16030534351144" y="97.183098591549296"/>
@@ -193,5 +279,8 @@
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="table.furniture" catalog="system" width="128" height="78"/>
         <image name="wineglass" catalog="system" width="95" height="128"/>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

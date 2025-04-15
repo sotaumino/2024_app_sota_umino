@@ -15,6 +15,12 @@ class RecommendViewCell: UITableViewCell {
     @IBOutlet weak var zashikiStackView: UIStackView!
     @IBOutlet weak var HorigotatsuSatackView: UIStackView!
     
+    @IBOutlet weak var FreeFoodView: UIView!
+    @IBOutlet weak var HorigotatsuView: UIView!
+    @IBOutlet weak var ZashikiView: UIView!
+    @IBOutlet weak var PrivateRoomView: UIView!
+    @IBOutlet weak var FreeDrinkView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,25 +28,40 @@ class RecommendViewCell: UITableViewCell {
     
     public func setUp(freeDrink: String, freeFood: String, privateRoom: String, horigotatu: String, tatami: String)
     {
-        if !freeDrink.contains("あり")
+        if freeDrink.contains("あり")
         {
-            FreeFoodStackView.backgroundColor = UIColor.gray
+            FreeDrinkView.isHidden = false
+        }
+        else {
+            FreeDrinkView.isHidden = true
         }
             
-        if !freeFood.contains("あり") {
-            FreeDrinkStackView.backgroundColor = UIColor.gray
+        if freeFood.contains("あり") {
+            FreeFoodView.isHidden = false
+        } 
+        else {
+            FreeFoodView.isHidden = true
         }
             
-        if !privateRoom.contains("あり") {
-            PrivateRoomStackView.backgroundColor = UIColor.gray
+        if privateRoom.contains("あり") {
+            PrivateRoomView.isHidden = false
+        }
+        else {
+            PrivateRoomView.isHidden = true
         }
         
-        if !horigotatu.contains("あり") {
-            HorigotatsuSatackView.backgroundColor = UIColor.gray
+        if horigotatu.contains("あり") {
+            HorigotatsuView.isHidden = false
+        }
+        else {
+            HorigotatsuView.isHidden = true
         }
         
-        if !tatami.contains("あり") {
-            zashikiStackView.backgroundColor = UIColor.gray
+        if tatami.contains("あり") {
+             ZashikiView.isHidden = false
+        }
+        else {
+            ZashikiView.isHidden = true
         }
     }
 
